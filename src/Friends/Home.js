@@ -1,7 +1,8 @@
 // styling
 import "./home.css"
 // images
-import love from "../assets/images/Love.gif"
+import love from "../assets/images/Love.gif";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -13,7 +14,9 @@ const Home = () => {
             <h3 className="challenge">Challenge</h3>
             <img className="friends" src={love} alt="friends"/>
             <h3 className="h-2">Can you guess the choice of <span className="name"><mark>bode?</mark></span></h3>
-            <button className="accept">Accept Dare</button>
+            <Link to="/play">
+              <button className="accept">Accept Dare</button>
+            </Link>
         </div>
     </>
   )

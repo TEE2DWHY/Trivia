@@ -6,6 +6,7 @@ import Share from "./pages/Share";
 import PrivateRoute from "./utils/PrivateRoute";
 // Friends
 import That from "./Friends/Home";
+import Play from "./Friends/Play";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/create" element={<Create/>}/>
         <Route path="/that" element={<That/>}/>
+        <Route path="/play" element={<Play/>}/>
         {/* private route */}
         <Route element={<PrivateRoute/>}>
         <Route path="/start" element={<Start/>}/>
