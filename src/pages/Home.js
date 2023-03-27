@@ -7,7 +7,7 @@ import { RightArrow } from "../assets/icons/Arrows";
 const Home = () => {
   return (
     <>
-    <div className='container'>
+    <div>
         <h1 className='header-text'><mark>Friendship</mark> Challenge!!</h1>
         <div className='header-2'>
             <span className='this'>This</span> <span className='separator'>or</span><span className='that'>That</span>
