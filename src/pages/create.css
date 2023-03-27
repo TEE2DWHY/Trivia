@@ -47,6 +47,11 @@ input{
 
 .gender{
     display: none;
+    /* margin-top: 20%; */
+}
+
+.name{
+    text-transform: capitalize;
 }
 
 .show-gender{
@@ -88,6 +93,10 @@ input{
         width: 70%;
         padding: 20px 50px;
         border-radius: 7px;
+    }
+
+    .gender{
+        margin-top: 20%;
     }
 
     .gender-container{

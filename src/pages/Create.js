@@ -44,7 +44,7 @@ const Create = () => {
             {/* Gender */}
             <div className="gender">
             <br/>
-                <h1>Welcome {name}!!</h1>
+                <h1>Welcome <span className="name">{name}</span>!!</h1>
                 <h2 className="who-are-you">Whats your Gender?</h2>
                 <span className="gender-icon">
                     <Link to="/start"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>

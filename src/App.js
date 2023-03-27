@@ -5,8 +5,11 @@ import Start from "./pages/Start";
 import Share from "./pages/Share";
 import PrivateRoute from "./utils/PrivateRoute";
 // Friends
-import That from "./Friends/Home";
-import Play from "./Friends/Play";
+import That from "./pages/Friends/Home";
+import Play from "./pages/Friends/Play";
+import Quiz from "./pages/Friends/Quiz";
+// 404
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
         <Route path="/create" element={<Create/>}/>
         <Route path="/that" element={<That/>}/>
         <Route path="/play" element={<Play/>}/>
+        <Route path="/quiz" element={<Quiz/>}/>
+        <Route path="/*" element={<NotFound/>}/>
         {/* private route */}
         <Route element={<PrivateRoute/>}>
         <Route path="/start" element={<Start/>}/>

@@ -14,18 +14,30 @@ body{
     padding: 0 40%;
 }
 
-.this{
+.circle1{
     border-radius: 100%;
-    padding: 30px;
+    background-color: #6c63ff;
+    padding: 20px;
+    color: #fff;
 }
 
 .or{
     padding: 20px;
 }
 
-.that{
+.circle2{
     border-radius: 100%;
-    padding: 30px;
+    padding: 50px;
+    background-color: #ff63ae;
+    padding: 20px;
+    color: #fff;
+}
+
+.circle1:hover, .circle2:hover{
+    background-color: #1b1b1b;
+    transition: all 2s ease-in;
+    animation: wobble;
+    animation-duration: 5s;
 }
 
 .challenge{
@@ -37,6 +49,8 @@ body{
 .friends{
     width: 300px;
     height: 300px;
+    animation: fadeIn;
+    animation-duration: 5s;
 }
 
 .h-2{
@@ -53,4 +67,20 @@ body{
     border: none;
     border-radius: 80px;
     width: 30%;
+}
+
+/* mobile */
+@media(max-width:1200px){
+    .home-h1{
+        margin: 10% 0;
+    }
+
+    .this-and-that{
+       padding: 0 70px;
+    }
+    
+    .accept{
+        width: 80%;
+        margin-top: 5%;
+    }
 }

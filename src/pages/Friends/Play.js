@@ -1,13 +1,13 @@
 import {useState} from 'react'
 import { Link } from "react-router-dom";
 // icon
-import {LeftArrow} from "../assets/icons/Arrows";
-import { Person } from "../assets/icons/Personality";
+import { LeftArrow } from '../../assets/icons/Arrows';
+import { Person } from "../../assets/icons/Personality";
 // image
-import boy from "../assets/images/boy.png";
-import girl from "../assets/images/girl.png";
+import boy from "../../assets/images/boy.png";
+import girl from "../../assets/images/girl.png";
 // session
-import {userName} from "../config/session"
+import {userName} from "../../config/session"
 
 
 const Play = () => {
@@ -46,11 +46,11 @@ const Play = () => {
             {/* Gender */}
             <div className="gender">
             <br/>
-                <h1>Welcome {name}!!</h1>
+                <h1>Welcome <span className='name'>{name}</span>!!</h1>
                 <h2 className="who-are-you">Whats your Gender?</h2>
                 <span className="gender-icon">
-                    <Link to="/start"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>
-                    <Link to="/start"><div className="gender-container"><img className="gender-img" src={girl} alt="boy"/></div></Link>
+                    <Link to="/quiz"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>
+                    <Link to="/quiz"><div className="gender-container"><img className="gender-img" src={girl} alt="boy"/></div></Link>
                 </span>
             </div>
        </div>
