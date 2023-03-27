@@ -1,0 +1,133 @@
+
+.share-header{
+    margin-top: 5%;
+    font-weight: bold;
+}
+
+.share{
+    border: 2px solid #6c63ff;
+    width: 30%;
+    margin: auto;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.guess{
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.quiz-link{
+    color: #6c63ff;
+    font-size: 22px;
+}
+
+.link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 1%; */
+}
+
+.share-link{
+    margin-top: 4%;
+    border: 2px solid #6c63ff;
+    padding: 5px;
+    border-radius: 7px;
+    margin-right: 3px;
+    background-color: #efeefc;
+    /* opacity: 0.8; */
+}
+
+.copy{
+    padding: 10px;
+    border: 2px solid #6c63ff;
+    border-radius: 9px;
+    margin-top: 3%;
+    cursor: pointer;
+    background-color: #efeefc;
+}
+
+.copy:hover{
+    animation: pulse;
+    animation-duration: 3s;
+    background-color: #1b1b1b;
+    color: #fff;
+    border: none;
+}
+
+.link-content{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* buttons */
+
+.whatsapp{
+    padding: 10px 50px;
+    background-color: rgb(37, 211, 102);
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.snapchat{
+    background-color: rgb(253, 250, 66);
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    color: #1b1b1b;
+    padding: 10px;
+}
+
+.facebook{
+    padding: 10px;
+    background-color: rgb(66, 103, 178);
+    width: 35%;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.messenger{
+    padding: 10px;
+    background-color: rgb(0, 178, 255);
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.instagram{
+    padding: 10px;
+    background: linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d);
+    width: 35%;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.scores{
+    padding: 10px;
+    background-color: #6c63ff;
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+}
+
+@media(max-width:1200px){
+    .share-header{
+        margin-top: 20%;
+    }
+
+    .share{
+        width: 80%;
+    }
+
+    .whatsapp, .snapchat, .facebook, .messenger, .instagram{
+        padding: 10px 30px;
+        width: 80%;
+    }
+}

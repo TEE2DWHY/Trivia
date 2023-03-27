@@ -1,0 +1,77 @@
+.choice{
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.username{
+    text-transform: capitalize;
+}
+/* button */
+button{
+    padding: 10px;
+    border: 2px solid #1b1b1b;
+    margin: 20px;
+}
+
+button:hover{
+    transition: 1s all ease-in-out;
+    background-color: #1b1b1b;
+    color: #fff;
+    animation: pulse;
+    animation-duration: 3s;
+    border-radius: 4px;
+}
+
+.skip{
+    background-color: #b7a3f4;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: #fff;
+    border: 2px dotted #eeedf2;
+    display: block;
+    margin: 20px auto;
+    width: 30%;
+}
+
+.submit{
+    background-color: #623ada;
+    animation: wobble;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: #fff;
+    border: 2px solid #623ada;
+    display: block;
+    margin: 20px auto;
+    width: 30%;
+}
+/* Manage State */
+.gym, .song, .swallow, .sex, .subject, .social-media, .movies, .food-hub{
+    
+    display: none ;
+}
+
+.show-class{
+    display: block;
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+
+.hide-class{
+    display: none;
+}
+
+@media(max-width:1200px){
+    .choice{
+        margin-top: 10%;
+    }
+
+    .skip{
+        width: 80%;
+    }
+
+    .submit{
+        width: 80%;
+    }
+}

@@ -1,0 +1,62 @@
+body {
+  font-family: 'Alkatra', cursive;
+  background-color: #f3f5fa;
+  overflow-x: hidden;
+}
+
+body:hover{
+  animation: pulse;
+  animation-duration: 5s;
+}
+
+a{
+  text-decoration: none;
+}
+
+.fa-arrow-left{
+  margin-right: 3%;
+}
+
+.person{
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 43px;
+  color: #6c63ff;
+}
+
+.button{
+  cursor: pointer;
+  border: 2px solid #6c63ff;
+  font-size: 12px;
+  border-radius: 4px;
+  margin: 50px 10px;
+  padding: 5px 10px;
+}
+
+.button:hover{
+  background-color: #1b1b1b;
+  color: #fff;
+  animation: jello;
+  animation-duration: 4s;
+  border: 1px solid #fff;
+  transition: 2s all ease-in;
+}
+
+.fa-rotate-right{
+  font-size: 20px;
+ margin-top: 10px;
+}
+
+.fa-copy{
+ font-size: 16px;
+}
+/* mobile */
+@media(max-width:1200px){
+  .person{
+    margin-left: 5%;
+  }
+
+  .button{
+    margin: 50px 2px;
+  }
+}
