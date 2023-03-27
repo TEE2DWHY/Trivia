@@ -50,6 +50,10 @@ a{
 .fa-copy{
  font-size: 16px;
 }
+
+.broken{
+  margin-top: 2%;
+}
 /* mobile */
 @media(max-width:1200px){
   .person{
@@ -58,5 +62,9 @@ a{
 
   .button{
     margin: 50px 2px;
+  }
+
+  .broken{
+      margin-top: 10%;
   }
 }
