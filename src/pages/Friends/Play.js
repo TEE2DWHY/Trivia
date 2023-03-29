@@ -49,8 +49,8 @@ const Play = () => {
                 <h1>Welcome <span className='name'>{name}</span>!!</h1>
                 <h2 className="who-are-you">Whats your Gender?</h2>
                 <span className="gender-icon">
-                    <Link to="/quiz"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>
-                    <Link to="/quiz"><div className="gender-container"><img className="gender-img" src={girl} alt="boy"/></div></Link>
+                    <Link to="/play-quiz"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>
+                    <Link to="/play-quiz"><div className="gender-container"><img className="gender-img" src={girl} alt="boy"/></div></Link>
                 </span>
             </div>
        </div>

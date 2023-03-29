@@ -8,6 +8,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import That from "./pages/Friends/Home";
 import Play from "./pages/Friends/Play";
 import Quiz from "./pages/Friends/Quiz";
+import PlayQuiz from "./pages/Friends/Start";
 // 404
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/that" element={<That/>}/>
         <Route path="/play" element={<Play/>}/>
         <Route path="/quiz" element={<Quiz/>}/>
+        <Route path="/play-quiz" element={<PlayQuiz/>}/>
         <Route path="/*" element={<NotFound/>}/>
         {/* private route */}
         <Route element={<PrivateRoute/>}>
