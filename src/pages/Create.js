@@ -5,24 +5,36 @@ import { Person } from "../assets/icons/Personality";
 // image
 import boy from "../assets/images/boy.png";
 import girl from "../assets/images/girl.png"
-import { Link } from "react-router-dom";
 import { userName } from "../config/session";
 
 const Create = () => {
+    // name
     const [name, setName] = useState("");
     const handleName = (e) =>{
         setName(
            e.target.name =  e.target.value
         )
     }
+    // gender
+    const [gender, setGender] = useState({
+        boy: false, girl: false
+    });
+    const handleGender = (e) =>{
+        setGender((prevFormData) =>{
+            return{
+                ...prevFormData,
+                [e.target.name] : true
+            }
+        })
+        window.location = "/start"
+    }
     const handleSubmit = (e) =>{
             e.preventDefault();
-            // window.location = "/start"
-            // console.log(name)
             userName(name)
             document.querySelector(".gender").classList.add("show-gender");
             document.querySelector(".form").classList.add("hide-form");
     }
+    console.log(gender)
   return (
    <>
        <div>
@@ -47,8 +59,12 @@ const Create = () => {
                 <h1>Welcome <span className="name">{name}</span>!!</h1>
                 <h2 className="who-are-you">Whats your Gender?</h2>
                 <span className="gender-icon">
-                    <Link to="/start"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>
-                    <Link to="/start"><div className="gender-container"><img className="gender-img" src={girl} alt="boy"/></div></Link>
+                   <div className="gender-container" onClick={handleGender}>
+                        <img className="gender-img" src={boy} alt="boy" name="boy"/>
+                   </div>
+                  <div className="gender-container" onClick={handleGender}>
+                        <img className="gender-img" src={girl} alt="boy" name="girl"/>
+                  </div>
                 </span>
             </div>
        </div>
