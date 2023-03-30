@@ -8,10 +8,10 @@
 }
 /* button */
 button{
-    padding: 15px 40px;
+    padding: 10px 30px;
     border: 3px solid #181111;
     margin: 20px;
-    background-color: rgba(105, 98, 236, 0.324);
+    background-color: #ECF2FF;
 }
 
 button:hover{
