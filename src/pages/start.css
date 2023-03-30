@@ -3,19 +3,24 @@
     margin-top: 2%;
 }
 
+.object{
+    width: 40%;
+    margin: auto;
+}
+
 .username{
     text-transform: capitalize;
 }
 /* button */
 button{
-    padding: 10px 30px;
-    border: 3px solid #181111;
+    padding: 10px 20px;
+    border: 2px solid #181111;
     margin: 20px;
-    background-color: #ECF2FF;
+    background-color: #c1d2f5;
 }
 
 button:hover{
-    transition: 1s all ease-in-out;
+    transition: 2s all ease-in-out;
     background-color: #1b1b1b;
     color: #fff;
     animation: pulse;
@@ -46,13 +51,12 @@ button:hover{
     display: block;
     margin: 20px auto;
     width: 30%;
+    display: none;
 }
 /* Manage State */
 .gym, .song, .swallow, .sex, .subject, .social-media, .movies, .food-hub{
-    
     display: none ;
 }
-
 .show-class{
     display: block;
     animation: fadeIn;
@@ -64,8 +68,16 @@ button:hover{
 }
 
 @media(max-width:1200px){
+    button{
+        padding: 6px;
+    }
+   
     .choice{
         margin-top: 10%;
+    }
+
+    .object{
+        width: 80%;
     }
 
     .skip{

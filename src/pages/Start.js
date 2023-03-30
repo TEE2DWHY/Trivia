@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 // icons
 import Restart from "../assets/icons/Restart";
+// button component
 import Button from "../component/Button";
 // utils
 import { display } from "../utils/display";
@@ -9,8 +10,36 @@ import { display } from "../utils/display";
 import "./start.css"
 
 const Start = () => {
-  const name = sessionStorage.getItem("name");
+      // get username
+      const name = sessionStorage.getItem("name");
+      // get user choice
+      const [choice, setChoice] = useState({
+        beard: false, noBeard: false,
+        gym: false, noGym: false,
+        sadSong: false, romanticSong: false,
+        eba: false, amala: false,
+        missionary: false, doggy: false,
+        english: false, math: false,
+        twitter: false, instagram: false,
+        actionMovies: false, loveMovies: false,
+        sansBuka: false, skillz: false
+      })
 
+      const handleChoice = (e) =>{
+        setChoice((initials)=>{
+          return{
+            ...initials,
+            [e.target.name] : true
+          }
+        })
+      }
+
+      // handleSubmit
+      const handleSubmit = () =>{
+        window.location = "/share"
+      }
+
+      // console.log(choice);
   return (
     <>
         <Button
@@ -46,49 +75,56 @@ const Start = () => {
           display(".beard", "hide-class")
           display(".gym", "show-class")
         }}  id="element1">
-          <button className="beard">Beard</button> <button>No Beards</button>
+          <button onClick={handleChoice} name="beard">Beard</button> 
+          <button onClick={handleChoice} name="noBeard">No Beards</button>
         </div>
 
         <div className="gym object" onClick={()=>{
            display(".gym", "hide-class")
            display(".song", "show-class")
         }} id="element2">
-          <button>Gym</button> <button>No Gym</button>
+          <button onClick={handleChoice} name="gym">Gym</button>
+          <button onClick={handleChoice} name="noGym">No Gym</button>
         </div>
 
         <div className="song object" onClick={()=>{
            display(".song", "hide-class")
            display(".swallow", "show-class")
            }} id="element3">
-          <button>Sad Songs</button> <button>Romantic Songs</button>
+          <button onClick={handleChoice} name="sadSong">Sad Songs</button> 
+          <button onClick={handleChoice} name="romanticSong">Romantic Songs</button>
         </div>
 
         <div className="swallow object" onClick={()=>{
            display(".swallow", "hide-class")
            display(".sex", "show-class")
            }} id="element4">
-          <button>Eba</button> <button>Amala</button>
+          <button onClick={handleChoice} name="eba">Eba</button> 
+          <button onClick={handleChoice} name="amala">Amala</button>
         </div>
 
         <div className="sex object" onClick={()=>{
            display(".sex", "hide-class")
            display(".subject", "show-class")
            }} id="element5">
-          <button>Missionary</button> <button>Doggy</button>
+          <button onClick={handleChoice} name="missionary">Missionary</button> 
+          <button onClick={handleChoice} name="doggy">Doggy</button>
         </div>
 
         <div className="subject object" onClick={()=>{
            display(".subject", "hide-class")
            display(".social-media", "show-class")
            }} id="element6">
-          <button>Math</button> <button>English</button>
+          <button onClick={handleChoice} name="math">Math</button> 
+          <button onClick={handleChoice} name="english">English</button>
         </div>
 
         <div className="social-media object" onClick={()=>{
            display(".social-media", "hide-class")
            display(".movies", "show-class")
            }} id="element7">
-          <button>Twitter</button> <button>Instagram</button>
+          <button onClick={handleChoice} name="twitter">Twitter</button> 
+          <button onClick={handleChoice} name="instagram">Instagram</button>
         </div>
 
         <div className="movies object" onClick={()=>{
@@ -96,20 +132,22 @@ const Start = () => {
            display(".food-hub", "show-class")
            display(".skip", "hide-class")
            }} id="element8">
-          <button>Action Movies</button> <button>Love Movies</button>
+          <button onClick={handleChoice} name="actionMovies">Action Movies</button> 
+          <button name="loveMovies">Love Movies</button>
         </div>
 
-        <div className="food-hub">
-          <button>Sans Buka</button> <button>Skillz</button>
+        <div className="food-hub" onClick={()=>{
+          display(".submit", "show-class")
+        }}>
+          <button onClick={handleChoice} name="sansBuka">Sans Buka</button> 
+          <button onClick={handleChoice} name="skillz">Skillz</button>
           {/* submit */}
-          <Link to="/share">
-            <button className="submit">
+            <button className="submit" onClick={handleSubmit}>
               Submit
             </button>
-            </Link>
           </div>
 
-      <button className="skip" onClick={()=>{
+        <button className="skip" onClick={()=>{
             window.location.reload()
             // hide(".object", "hide-class");
             // skip("element1", "element2", "element3", "element4", "element5", "element6","element7", "element8")
