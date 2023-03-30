@@ -36,13 +36,13 @@ const Start = () => {
 
       // handleSubmit
       const handleSubmit = () =>{
-        window.location = "/share"
-      }
+         console.log(choice);
+        window.location = "/share";
 
-      // console.log(choice);
+      }
   return (
     <>
-        <Button
+          <Button
             text="1"
            />
           <Button
