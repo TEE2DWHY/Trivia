@@ -1,8 +1,6 @@
 import React from 'react'
 
 const Footer = () => {
-    const date = new Date().getDate()
-    const month = 1 + new Date().getMonth()
     const year = new Date().getFullYear()
   return (
     <>
@@ -20,7 +18,8 @@ const Footer = () => {
                     <span className='Y'>Y</span>
                 </span>
             </a>
-            <p className='calendar'>{date} - {month} - {year}</p>
+            <br/>
+            <span className='calendar'>{year}</span>
          </p>
     </>
   )

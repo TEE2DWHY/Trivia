@@ -68,7 +68,7 @@ a{
 }
 
 .calendar{
-  font-size: 12px;
+  font-size: 16px;
 }
 /* mobile */
 @media(max-width:1200px){

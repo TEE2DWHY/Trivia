@@ -55,7 +55,7 @@ const Create = () => {
             </form>
             {/* Gender */}
             <div className="gender">
-            <br/>
+                 <br/>
                 <h1>Welcome <span className="name">{name}</span>!!</h1>
                 <h2 className="who-are-you">Whats your Gender?</h2>
                 <span className="gender-icon">
