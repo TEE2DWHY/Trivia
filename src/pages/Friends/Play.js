@@ -6,7 +6,6 @@ import { Person } from "../../assets/icons/Personality";
 // image
 import boy from "../../assets/images/boy.png";
 import girl from "../../assets/images/girl.png";
-import Footer from '../../component/Footer';
 // session
 import {userName} from "../../config/session"
 
@@ -56,7 +55,6 @@ const Play = () => {
             </div>
        </div>
 
-       <Footer/>
    </>
   )
 }

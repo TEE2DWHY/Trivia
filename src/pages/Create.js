@@ -6,7 +6,6 @@ import { Person } from "../assets/icons/Personality";
 import boy from "../assets/images/boy.png";
 import girl from "../assets/images/girl.png"
 import { userName } from "../config/session";
-import Footer from "../component/Footer";
 
 const Create = () => {
     // name
@@ -69,7 +68,6 @@ const Create = () => {
                 </span>
             </div>
        </div>
-       <Footer/>
    </>
   )
 }
