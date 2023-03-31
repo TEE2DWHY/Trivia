@@ -5,6 +5,8 @@ import Copy from "../assets/icons/Copy"
 import { Facebook, Instagram, Messenger, SnapChat, WhatsApp } from "../assets/icons/Social"
 
 const Share = () => {
+  const id = "gneQBA"
+  const url = `https://trivia-gamex.netlify.app/?id=${id}`
   // copy url link
   const copy = () =>{
     const link = document.getElementById("link");
@@ -15,13 +17,13 @@ const Share = () => {
   return (
     <>
         <h1 className="share-header">Share Quiz...</h1>
-        <h3 className="guess">Let's see Who can guess your choice?</h3>
+        <h3 className="guess">Let's see who can guess your choice?</h3>
         <div className="share">
             <h3 className="quiz-link">Send <span style={{fontWeight:"bold"}}>Quiz Link</span> to Friends</h3>
             <div className="link">
               <span className="share-link">
-              <h4 className="link-content" id="link">
-              https://this.youtest.me/that?id=gneQBA</h4>
+              <h5 className="link-content" id="link">
+              {url}</h5>
               </span>
               <span className="copy" onClick={()=>{
                  copy()

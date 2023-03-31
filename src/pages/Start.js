@@ -37,8 +37,8 @@ const Start = () => {
       const trueValues = Object.keys(choice).filter((key) => choice[key]);
       // handleSubmit
       const handleSubmit = (e) =>{
-      console.log(`Here is a list of what ${name} chose: ${trueValues}`);
-        // window.location = "/share";
+      console.log(trueValues);
+        window.location = "/share";
       }
   return (
     <>
