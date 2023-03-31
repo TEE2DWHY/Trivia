@@ -3,10 +3,12 @@ import "./share.css"
 // icons
 import Copy from "../assets/icons/Copy"
 import { Facebook, Instagram, Messenger, SnapChat, WhatsApp } from "../assets/icons/Social"
-
+// socials sharing
+import { whatsapp } from "../utils/socials"
+// url link
+const id = "gneQBA";
+export const link = `https://trivia-gamex.netlify.app/?id=${id}`
 const Share = () => {
-  const id = "gneQBA"
-  const url = `https://trivia-gamex.netlify.app/?id=${id}`
   // copy url link
   const copy = () =>{
     const link = document.getElementById("link");
@@ -23,13 +25,13 @@ const Share = () => {
             <div className="link">
               <span className="share-link">
               <h5 className="link-content" id="link">
-              {url}</h5>
+              {link}</h5>
               </span>
               <span className="copy" onClick={()=>{
                  copy()
               }}><Copy/></span>
             </div>
-            <button className="whatsapp">
+            <button className="whatsapp" onClick={whatsapp}>
                 <WhatsApp/> Share on WhatsApp
             </button>
             <div>
