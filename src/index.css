@@ -54,6 +54,22 @@ a{
 .broken{
   margin-top: 2%;
 }
+
+.footer-name{
+  margin-left: 5px;
+}
+
+.T{color:#6c63ff; font-weight: bold;} .E{color: #ec3636; font-weight: bold;}
+ .D{color: #e7b40d; font-weight: bold;} .W{color: #ec3636; font-weight: bold;} 
+ .Y{color: #6c63ff; font-weight: bold;}
+
+.footer{
+  margin-top: 1%;
+}
+
+.calendar{
+  font-size: 12px;
+}
 /* mobile */
 @media(max-width:1200px){
   .person{

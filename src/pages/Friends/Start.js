@@ -1,6 +1,7 @@
 // icons
 import Restart from "../../assets/icons/Restart";
 import Button from "../../component/Button";
+import Footer from "../../component/Footer";
 // utils
 import { display } from "../../utils/display";
 // import { hide, skip } from "../utils/skip";
@@ -115,6 +116,8 @@ const Start = () => {
         </button>
     
         </div>
+
+        <Footer/>
     </>
   )
 }

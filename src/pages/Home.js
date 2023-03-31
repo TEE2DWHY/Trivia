@@ -1,5 +1,9 @@
-import {Link} from "react-router-dom"
-import "./home.css"
+import {Link} from "react-router-dom";
+// component
+import Footer from "../component/Footer";
+// styling
+import "./home.css";
+// images
 import cupid from "../assets/images/cupid.gif";
 // icons
 // import Spinner from '../assets/icons/Spinner';
@@ -22,7 +26,7 @@ const Home = () => {
         </button>
         </Link>
     </div>
-       
+    <Footer/>   
     </>
   )
 }

@@ -35,15 +35,10 @@ const Start = () => {
       }
       // Get only true values
       const trueValues = Object.keys(choice).filter((key) => choice[key]);
-      const userChoice = trueValues.map((selected)=>{
-        return{
-          selected
-        }
-      })
       // handleSubmit
       const handleSubmit = (e) =>{
-      console.log(userChoice);
-        window.location = "/share";
+      console.log(trueValues);
+        // window.location = "/share";
       }
   return (
     <>

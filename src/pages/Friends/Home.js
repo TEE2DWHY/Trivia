@@ -3,6 +3,7 @@ import "./home.css"
 // images
 import love from "../../assets/images/Love.gif";
 import { Link } from "react-router-dom";
+import Footer from "../../component/Footer";
 const Home = () => {
   return (
     <>
@@ -18,6 +19,8 @@ const Home = () => {
               <button className="accept">Accept Dare</button>
             </Link>
         </div>
+
+        <Footer/>
     </>
   )
 }

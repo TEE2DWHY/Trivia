@@ -3,6 +3,7 @@ import "./share.css"
 // icons
 import Copy from "../assets/icons/Copy"
 import { Facebook, Instagram, Messenger, SnapChat, WhatsApp } from "../assets/icons/Social"
+import Footer from "../component/Footer"
 
 const Share = () => {
   // copy url link
@@ -50,6 +51,8 @@ const Share = () => {
                View Scores
             </button>
         </div>
+
+        <Footer/>
     </>
   )
 }
