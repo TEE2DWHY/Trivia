@@ -42,8 +42,8 @@ const Start = () => {
       })
       // handleSubmit
       const handleSubmit = (e) =>{
-      console.log(userChoice)
-        // window.location = "/share";
+      console.log(userChoice);
+        window.location = "/share";
       }
   return (
     <>
