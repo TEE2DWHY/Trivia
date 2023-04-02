@@ -7,7 +7,6 @@ export const whatsapp = () =>{
     window.open(whatsapp_url);
 }
 
-
 // export const facebook = () =>{
 //     var url = "https://www.example.com"; // replace with your desired URL
 //     var text = "Check out this website!"; // replace with your desired text

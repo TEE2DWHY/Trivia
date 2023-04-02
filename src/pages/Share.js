@@ -7,7 +7,7 @@ import { Facebook, Instagram, Messenger, SnapChat, WhatsApp } from "../assets/ic
 import { whatsapp } from "../utils/socials"
 // url link
 const id = "gneQBA";
-export const link = `https://trivia-gamex.netlify.app/?id=${id}`
+export const link = `https://trivia-gamex.netlify.app/that/?id=${id}`
 const Share = () => {
   // copy url link
   const copy = () =>{
