@@ -84,10 +84,23 @@ input:focus ~ .error{
     margin: 20px;
 }
 
+/* .gender-name{
+    margin: 5px 0;
+} */
+
 .gender-img{
     width: 60%;
     height: 20%;
 }
+
+.create{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #ffff;
+    width: 30%;
+}
+
 /* Mobile */
 @media(max-width:1200px){
     .create-quiz {
@@ -119,5 +132,9 @@ input:focus ~ .error{
 
     .gender-img{
         width: 100%;
+    }
+
+    .create{
+        width: 80%;
     }
 }
