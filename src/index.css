@@ -9,6 +9,14 @@ body:hover{
   animation-duration: 5s;
 }
 
+::-webkit-scrollbar {
+  background-color: #f48e8e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6c63ff; 
+}
+
 a{
   text-decoration: none;
 }

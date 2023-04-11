@@ -33,7 +33,7 @@ const Create = () => {
     })
 }
 
-    // post username to database
+    // create user
     const submitName = async (e) =>{
         e.preventDefault();
         try{
@@ -51,21 +51,23 @@ const Create = () => {
         }
          
     }
-    // update user gender to database
+    // update user gender 
     const submitGender = async () =>{
            // get id
         const id = sessionStorage.getItem("id")
+        const alert = document.querySelector(".alert-err")
+        if(gender.boy === false && gender.girl === false){
+            return alert.innerHTML = `<p>Please select a Gender!</p>`;
+        }
         try{
            const res = await axios.patch(`${update}/${id}`, gender)
            console.log(res)
+           window.location = "/start"
         }
         catch(err){
-            console.log(err);
-            // const error = document.querySelector(".error")
-            // error.innerHTML = `<p>An error occurred....</p>`
+            alert.innerHTML = `<p>An error occurred..</p>`
         }  
     }
-    console.log(gender)
   return (
    <>
        <div>
@@ -100,6 +102,7 @@ const Create = () => {
                     <img className="gender-img" src={girl} alt="boy" name="girl" onClick={handleGender}/>
                   </div>
                 </span>
+                <p className="alert-err"></p>
                 <button className="create" onClick={submitGender}>Proceed to Create</button>
             </div>
        </div>

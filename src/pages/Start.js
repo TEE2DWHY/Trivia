@@ -1,11 +1,13 @@
 import { useState } from "react";
+import axios from "axios"
 // icons
 import Restart from "../assets/icons/Restart";
 // button component
 import Button from "../component/Button";
 // utils
 import { display } from "../utils/display";
-// import { hide, skip } from "../utils/skip";
+// url
+import { update } from "../config/url";
 // styling
 import "./start.css"
 
@@ -36,9 +38,19 @@ const Start = () => {
       // Get only true values
       const trueValues = Object.keys(choice).filter((key) => choice[key]);
       // handleSubmit
-      const handleSubmit = (e) =>{
-      console.log(trueValues);
-        window.location = "/share";
+      const handleSubmit = async (e) =>{
+        e.preventDefault();
+        try{
+          const id = sessionStorage.getItem("id");
+          const res = await axios.patch(`${update}/${id}`, {choice: trueValues});
+          console.log(res.data)
+          window.location = "/share";
+        }
+        catch(err){
+          const error = document.querySelector(".alert-err");
+          error.innerHTML = `<p>An error occurred</p>`
+          console.log(err)
+        }  
       }
   return (
     <>
@@ -145,12 +157,11 @@ const Start = () => {
             <button className="submit" onClick={handleSubmit}>
               Submit
             </button>
+            <div className="alert-err"></div>
           </div>
 
         <button className="skip" onClick={()=>{
             window.location.reload()
-            // hide(".object", "hide-class");
-            // skip("element1", "element2", "element3", "element4", "element5", "element6","element7", "element8")
           }}>Restart <Restart/>
         </button>
     

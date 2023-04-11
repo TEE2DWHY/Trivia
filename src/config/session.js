@@ -7,3 +7,7 @@ export const userName = (name)=>{
 export const id = (id) =>{
     sessionStorage.setItem("id", id)
 }
+
+// export const getId = (id)=>{
+//     sessionStorage.getItem(id)
+// }
