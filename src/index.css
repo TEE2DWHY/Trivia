@@ -10,11 +10,13 @@ body:hover{
 }
 
 ::-webkit-scrollbar {
-  background-color: #f48e8e;
+  background-color: #ff63ae;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #6c63ff; 
+  border-radius: 0 10px;
 }
 
 a{
@@ -57,6 +59,11 @@ a{
 
 .fa-copy{
  font-size: 16px;
+}
+
+.spinner-border{
+ justify-content: center;
+ align-items: center;
 }
 
 .broken{

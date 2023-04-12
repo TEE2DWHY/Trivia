@@ -8,7 +8,8 @@ import { display } from "../../utils/display";
 import ".././start.css"
 
 const Start = () => {
-    const name = sessionStorage.getItem("name");
+    // get creator name
+    const creatorName = sessionStorage.getItem("creatorName");
   return (
     <> 
         <Button
@@ -38,7 +39,7 @@ const Start = () => {
           <Button
           text="9"
            />
-        <h3 className="choice">What  will <span className="username">{name}</span> Choose?</h3>
+        <h3 className="choice">What  will <span className="username">{creatorName}</span> Choose?</h3>
         <div className="choice">
         <div className="beard object" onClick={()=>{
           display(".beard", "hide-class")

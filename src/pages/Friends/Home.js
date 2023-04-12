@@ -1,9 +1,26 @@
+import axios from "axios";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 // styling
 import "./home.css"
 // images
 import love from "../../assets/images/Love.gif";
-import { Link } from "react-router-dom";
+// urls
+import { update } from "../../config/url";
+
+// config
+import { creatorChoice, id } from "../../config/session";
+
 const Home = () => {
+  const creatorId = window.location.search.slice(4)
+  id(creatorId)
+  const [data, setData] = useState({});
+ const resource =  async () =>{
+    const res =  await axios.get(`${update}/${creatorId}`)
+    setData(res.data.user)
+ }
+ resource();
+ creatorChoice(data.name)
   return (
     <>
         <div className="home">
@@ -13,7 +30,7 @@ const Home = () => {
             </div>
             <h3 className="challenge">Challenge</h3>
             <img className="friends" src={love} alt="friends"/>
-            <h3 className="h-2">Can you guess the choice of <span className="name"><mark>bode?</mark></span></h3>
+            <h3 className="h-2">Can you guess the choice of <span className="name">{data.name}?</span></h3>
             <Link to="/play">
               <button className="accept">Accept Dare</button>
             </Link>

@@ -4,6 +4,7 @@ import { useState } from "react";
 // icons
 import {LeftArrow} from "../assets/icons/Arrows";
 import { Person } from "../assets/icons/Personality";
+import Spinner from "../assets/icons/Spinner"
 // image
 import boy from "../assets/images/boy.png";
 import girl from "../assets/images/girl.png"
@@ -36,6 +37,10 @@ const Create = () => {
     // create user
     const submitName = async (e) =>{
         e.preventDefault();
+        const continueText = document.querySelector(".continue-text");
+        continueText.innerHTML = " "
+        const spinner  = document.querySelector(".spinner-container");
+        spinner.classList.add("show-spinner");
         try{
             const res = await axios.post(create, {name})
             console.log(res.data)
@@ -84,7 +89,8 @@ const Create = () => {
                 />
                 <div className="error"></div>
                 <button className="continue">
-                    Continue
+                    <span className="continue-text">Continue</span> 
+                    <span className="spinner-container"> <Spinner/> </span>    
                 </button>
             </form>
             {/* Gender */}

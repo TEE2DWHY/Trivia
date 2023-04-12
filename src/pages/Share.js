@@ -6,7 +6,8 @@ import { Facebook, Instagram, Messenger, SnapChat, WhatsApp } from "../assets/ic
 // socials sharing
 import { whatsapp } from "../utils/socials"
 // url link
-const id = "gneQBA";
+const id = sessionStorage.getItem("id");
+// const trimId = id.slice(0, 6)
 export const link = `https://trivia-gamex.netlify.app/that/?id=${id}`
 const Share = () => {
   // copy url link
@@ -14,7 +15,7 @@ const Share = () => {
     const link = document.getElementById("link");
     const url = link.innerHTML
     navigator.clipboard.writeText(url);
-    alert(`${url} is copied. Share with your friends.`)
+    alert("link is copied. Share with your friends.")
   }
   return (
     <>

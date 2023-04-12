@@ -49,6 +49,15 @@ input:focus ~ .error{
     font-family: 'Alkatra', cursive;
 }
 
+.spinner-container{
+    padding: 0 20px;
+    display: none;
+}
+
+.show-spinner{
+    display: inline-block;
+}
+
 .who-are-you{
     margin-top: 5%;
     font-weight: bold;
