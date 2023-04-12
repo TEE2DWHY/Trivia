@@ -19,3 +19,15 @@ export const creatorChoice = (name, [beard, gym, song, swallow, sex, subject, so
     sessionStorage.setItem("socialChoice", social);
     sessionStorage.setItem("vendorChoice", vendor);
 }
+
+//set user(s) choice
+export const userChoice = ([beard, gym, song, swallow, sex, subject, social, vendor])=>{
+    sessionStorage.setItem("userBeardChoice", beard);
+    sessionStorage.setItem("userGymChoice", gym);
+    sessionStorage.setItem("userSongChoice", song);
+    sessionStorage.setItem("userSwallowChoice", swallow);
+    sessionStorage.setItem("userSexChoice", sex);
+    sessionStorage.setItem("userSubjectChoice", subject);
+    sessionStorage.setItem("userSocialChoice", social);
+    sessionStorage.setItem("userVendorChoice", vendor);
+}

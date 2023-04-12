@@ -23,7 +23,7 @@ const Home = () => {
         setData(res.data.user)
       }
       catch(err){
-        console.log(err)
+        // console.log(err)
       }
      }
      resource();
@@ -37,7 +37,7 @@ const Home = () => {
         setChoice(res.data.user.choice)
       }
       catch(err){
-        console.log(err)
+        // console.log(err)
       }
      }
      choices();

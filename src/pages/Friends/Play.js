@@ -24,7 +24,8 @@ const Play = () => {
             userName(name)
             document.querySelector(".gender").classList.add("show-gender");
             document.querySelector(".form").classList.add("hide-form");
-    }
+    };
+    userName("name")
   return (
    <>
             <div>
