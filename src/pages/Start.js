@@ -26,7 +26,7 @@ const Start = () => {
         actionMovies: false, loveMovies: false,
         sansBuka: false, skillz: false
       })
-
+      // handleChoice
       const handleChoice = (e) =>{
         setChoice((initials)=>{
           return{
@@ -81,7 +81,9 @@ const Start = () => {
           <Button
           text="9"
            />
-        <h3 className="choice">What will you Choose <span className="username">{name}</span>?</h3>
+        <h3 className="choice">What will you Choose 
+          <span className="username">{name}</span>?
+        </h3>
         <div className="choice">
         <div className="beard object" onClick={()=>{
           display(".beard", "hide-class")

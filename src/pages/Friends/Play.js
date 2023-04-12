@@ -11,12 +11,14 @@ import {userName} from "../../config/session"
 
 
 const Play = () => {
+    // set username
     const [name, setName] = useState("");
     const handleName = (e) =>{
         setName(
            e.target.name =  e.target.value
         )
     }
+    // handle submit
     const handleSubmit = (e) =>{
             e.preventDefault();
             // window.location = "/start"
@@ -25,6 +27,7 @@ const Play = () => {
             document.querySelector(".gender").classList.add("show-gender");
             document.querySelector(".form").classList.add("hide-form");
     };
+    //set username to session storage
     userName("name")
   return (
    <>
@@ -50,12 +53,18 @@ const Play = () => {
                 <h1>Welcome <span className='name'>{name}</span>!!</h1>
                 <h2 className="who-are-you">Whats your Gender?</h2>
                 <span className="gender-icon">
-                    <Link to="/play-quiz"><div className="gender-container"><img className="gender-img" src={boy} alt="boy"/></div></Link>
-                    <Link to="/play-quiz"><div className="gender-container"><img className="gender-img" src={girl} alt="boy"/></div></Link>
+                    <Link to="/play-quiz">
+                    <div className="gender-container">
+                    <img className="gender-img" src={boy} alt="boy"/>
+                    </div></Link>
+                    <Link to="/play-quiz">
+                    <div className="gender-container">
+                    <img className="gender-img" src={girl} alt="boy"/>
+                    </div>
+                    </Link>
                 </span>
             </div>
        </div>
-
    </>
   )
 }

@@ -33,7 +33,6 @@ const Create = () => {
             }
     })
 }
-
     // create user
     const submitName = async (e) =>{
         e.preventDefault();
@@ -99,14 +98,24 @@ const Create = () => {
                 <h1>Welcome <span className="name">{name}</span>!!</h1>
                 <h2 className="who-are-you">Choose your Gender?</h2>
                 <span className="gender-icon">
-                   <div className="gender-container">
-                   {/* <div className="gender-name">BOY</div> */}
-                    <img className="gender-img" src={boy} alt="boy" name="boy" onClick={handleGender}/>
-                   </div>
-                  <div className="gender-container">
-                  {/* <div className="gender-name">GIRL</div> */}
-                    <img className="gender-img" src={girl} alt="boy" name="girl" onClick={handleGender}/>
-                  </div>
+                    <div className="gender-container">
+                            <img 
+                                className="gender-img" 
+                                src={boy} 
+                                alt="boy" 
+                                name="boy" 
+                                onClick={handleGender}
+                            />
+                    </div>
+                    <div className="gender-container">
+                            <img 
+                                className="gender-img" 
+                                src={girl} 
+                                alt="boy" 
+                                name="girl" 
+                                onClick={handleGender}
+                            />
+                    </div>
                 </span>
                 <p className="alert-err"></p>
                 <button className="create" onClick={submitGender}>Proceed to Create</button>

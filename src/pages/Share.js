@@ -7,7 +7,6 @@ import { Facebook, Instagram, Messenger, SnapChat, WhatsApp } from "../assets/ic
 import { whatsapp } from "../utils/socials"
 // url link
 const id = sessionStorage.getItem("id");
-// const trimId = id.slice(0, 6)
 export const link = `https://trivia-gamex.netlify.app/that/?id=${id}`
 const Share = () => {
   // copy url link
@@ -22,15 +21,16 @@ const Share = () => {
         <h1 className="share-header">Share Quiz...</h1>
         <h3 className="guess">Let's see who can guess your choice?</h3>
         <div className="share">
-            <h3 className="quiz-link">Send <span style={{fontWeight:"bold"}}>Quiz Link</span> to Friends</h3>
+            <h3 className="quiz-link">Send <span style={{fontWeight:"bold"}}>
+              Quiz Link</span> to Friends</h3>
             <div className="link">
-              <span className="share-link">
-              <h5 className="link-content" id="link">
-              {link}</h5>
-              </span>
-              <span className="copy" onClick={()=>{
-                 copy()
-              }}><Copy/></span>
+                <span className="share-link">
+                <h5 className="link-content" id="link">
+                {link}</h5>
+                </span>
+                <span className="copy" onClick={()=>{
+                  copy()
+                }}><Copy/></span>
             </div>
             <button className="whatsapp" onClick={whatsapp}>
                 <WhatsApp/> Share on WhatsApp

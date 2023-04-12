@@ -3,7 +3,6 @@ import Restart from "../../assets/icons/Restart";
 import Button from "../../component/Button";
 // utils
 import { display } from "../../utils/display";
-// import { hide, skip } from "../utils/skip";
 // styling
 import ".././start.css"
 
@@ -41,8 +40,9 @@ const Start = () => {
           <Button
           text="9"
            />
-        <h3 className="choice"><span style={{textTransform: "capitalize",  padding: "0 5px"}}>{userName}</span> 
-        what  will <span style={{textTransform: "capitalize", padding: "0 5px"}}>{creatorName}</span> Choose?
+        <h3 className="choice">
+          <span style={{textTransform: "capitalize",  padding: "0 5px"}}>{userName}</span> 
+          what  will <span style={{textTransform: "capitalize", padding: "0 5px"}}>{creatorName}</span> Choose?
         </h3>
         <div className="choice">
         <div className="beard object" onClick={()=>{
@@ -114,13 +114,9 @@ const Start = () => {
 
       <button className="skip" onClick={()=>{
             window.location.reload()
-            // hide(".object", "hide-class");
-            // skip("element1", "element2", "element3", "element4", "element5", "element6","element7", "element8")
           }}>Restart <Restart/>
         </button>
-    
         </div>
-
     </>
   )
 }

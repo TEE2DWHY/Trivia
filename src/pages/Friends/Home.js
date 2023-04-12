@@ -17,7 +17,7 @@ const Home = () => {
     //get creator resource(s)
   const [data, setData] = useState({});
   useEffect(()=>{
-    const resource =  async () =>{
+    const resource =  async() =>{
       try{
         const res =  await axios.get(`${update}/${creatorId}`)
         setData(res.data.user)
@@ -31,7 +31,7 @@ const Home = () => {
     //get creator's choice(s) resource
   const [choice, setChoice] = useState([]);
   useEffect(()=>{
-    const choices =  async () =>{
+    const choices =  async() =>{
       try{
         const res =  await axios.get(`${update}/${creatorId}`)
         setChoice(res.data.user.choice)
@@ -49,7 +49,9 @@ const Home = () => {
         <div className="home">
             <h1 className="home-h1"><mark>Friendship Test!!</mark></h1>
             <div className="this-and-that">
-                <span className="circle1">This</span> <span className="or"> Or </span> <span className="circle2">That</span>
+                <span className="circle1">This</span>
+                <span className="or"> Or </span> 
+                <span className="circle2">That</span>
             </div>
             <h3 className="challenge">Challenge</h3>
             <img className="friends" src={love} alt="friends"/>
@@ -58,7 +60,6 @@ const Home = () => {
               <button className="accept">Accept Dare</button>
             </Link>
         </div>
-     
     </>
   )
 }
