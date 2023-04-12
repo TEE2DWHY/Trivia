@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // styling
 import "./home.css"
@@ -7,20 +7,43 @@ import "./home.css"
 import love from "../../assets/images/Love.gif";
 // urls
 import { update } from "../../config/url";
-
 // config
 import { creatorChoice, id } from "../../config/session";
 
 const Home = () => {
-  const creatorId = window.location.search.slice(4)
-  id(creatorId)
+  // get creator's id
+  const creatorId = window.location.search.slice(4);
+  id(creatorId);
+    //get creator resource(s)
   const [data, setData] = useState({});
- const resource =  async () =>{
-    const res =  await axios.get(`${update}/${creatorId}`)
-    setData(res.data.user)
- }
- resource();
- creatorChoice(data.name)
+  useEffect(()=>{
+    const resource =  async () =>{
+      try{
+        const res =  await axios.get(`${update}/${creatorId}`)
+        setData(res.data.user)
+      }
+      catch(err){
+        console.log(err)
+      }
+     }
+     resource();
+  })
+    //get creator's choice(s) resource
+  const [choice, setChoice] = useState([]);
+  useEffect(()=>{
+    const choices =  async () =>{
+      try{
+        const res =  await axios.get(`${update}/${creatorId}`)
+        setChoice(res.data.user.choice)
+      }
+      catch(err){
+        console.log(err)
+      }
+     }
+     choices();
+  })
+  // store creator's choices in session storage
+ creatorChoice(data.name, choice);
   return (
     <>
         <div className="home">

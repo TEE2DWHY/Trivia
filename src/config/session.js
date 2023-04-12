@@ -8,11 +8,14 @@ export const id = (id) =>{
     sessionStorage.setItem("id", id)
 }
 // set creator choice
-export const creatorChoice = (name)=>{
+export const creatorChoice = (name, [beard, gym, song, swallow, sex, subject, social, vendor])=>{
     sessionStorage.setItem("creatorName", name);
-    // sessionStorage.setItem("gender", gender)
+    sessionStorage.setItem("beardChoice", beard);
+    sessionStorage.setItem("gymChoice", gym);
+    sessionStorage.setItem("songChoice", song);
+    sessionStorage.setItem("swallowChoice", swallow);
+    sessionStorage.setItem("sexChoice", sex);
+    sessionStorage.setItem("subjectChoice", subject);
+    sessionStorage.setItem("socialChoice", social);
+    sessionStorage.setItem("vendorChoice", vendor);
 }
-
-// export const getId = (id)=>{
-//     sessionStorage.getItem(id)
-// }
