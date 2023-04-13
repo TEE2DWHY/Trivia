@@ -67,10 +67,10 @@ const Start = () => {
         <span style={{ textTransform: "capitalize", padding: "0 5px" }}>
           {userName}
         </span>
-        what will{" "}
+        what will
         <span style={{ textTransform: "capitalize", padding: "0 5px" }}>
           {creatorName}
-        </span>{" "}
+        </span>
         Choose?
       </h3>
       <div className="choice">

@@ -53,6 +53,15 @@
         }
       });
     </script> -->
+  <script>
+    const originalSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.send = function () {
+      if (arguments[0] === null) {
+        arguments[0] = '';
+      }
+      originalSend.apply(this, arguments);
+    };
+  </script>
 </body>
 
 </html>

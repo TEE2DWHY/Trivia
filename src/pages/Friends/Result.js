@@ -7,7 +7,7 @@ const Result = () => {
   return (
     <>
       <div className="result-container">
-        <h1>Good Friend</h1>
+        <h1>Good Friend!</h1>
         <img className="result" src={result} alt="eyes" />
         <br />
         <h4 className="creator-reaction">{creatorName} will like it.</h4>

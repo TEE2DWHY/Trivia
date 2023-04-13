@@ -1,25 +1,27 @@
-.choice{
+.choice {
     font-weight: bold;
     margin-top: 2%;
 }
 
-.object{
+.object {
     width: 40%;
     margin: auto;
 }
 
-.username{
+.username {
     text-transform: capitalize;
+    padding: 0 5px;
 }
+
 /* button */
-button{
+button {
     padding: 10px 20px;
     border: 2px solid #181111;
     margin: 20px;
     background-color: #c1d2f5;
 }
 
-button:hover{
+button:hover {
     transition: 2s all ease-in-out;
     background-color: #1b1b1b;
     color: #fff;
@@ -28,7 +30,7 @@ button:hover{
     border-radius: 4px;
 }
 
-.skip{
+.skip {
     background-color: #b7a3f4;
     font-size: 20px;
     padding: 10px 30px;
@@ -40,7 +42,7 @@ button:hover{
     width: 30%;
 }
 
-.submit{
+.submit {
     background-color: #623ada;
     animation: wobble;
     font-size: 20px;
@@ -53,38 +55,47 @@ button:hover{
     width: 30%;
     display: none;
 }
+
 /* Manage State */
-.gym, .song, .swallow, .sex, .subject, .social-media, .movies, .food-hub{
-    display: none ;
+.gym,
+.song,
+.swallow,
+.sex,
+.subject,
+.social-media,
+.movies,
+.food-hub {
+    display: none;
 }
-.show-class{
+
+.show-class {
     display: block;
     animation: fadeIn;
     animation-duration: 2s;
 }
 
-.hide-class{
+.hide-class {
     display: none;
 }
 
-@media(max-width:1200px){
-    button{
+@media(max-width:1200px) {
+    button {
         padding: 8px;
     }
-   
-    .choice{
+
+    .choice {
         margin-top: 10%;
     }
 
-    .object{
+    .object {
         width: 80%;
     }
 
-    .skip{
+    .skip {
         width: 80%;
     }
 
-    .submit{
+    .submit {
         width: 80%;
     }
 }
