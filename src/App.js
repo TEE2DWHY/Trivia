@@ -8,29 +8,30 @@ import PrivateRoute from "./utils/PrivateRoute";
 import That from "./pages/Friends/Home";
 import Play from "./pages/Friends/Play";
 import PlayQuiz from "./pages/Friends/Start";
+import Result from "./pages/Friends/Result";
 // 404
 import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <>
-    <Router>
-      <Routes>
-        {/* public route */}
-        <Route path="/" element={<Home/>}/>
-        <Route path="/create" element={<Create/>}/>
-        <Route path="/that" element={<That/>}/>
-        <Route path="/play" element={<Play/>}/>
-        <Route path="/play-quiz" element={<PlayQuiz/>}/>
-        <Route path="/*" element={<NotFound/>}/>
-        {/* private route */}
-        <Route element={<PrivateRoute/>}>
-        <Route path="/start" element={<Start/>}/>
-        <Route path="/share" element={<Share/>}/>
-        </Route>
-      </Routes>
-    </Router>
-       
+      <Router>
+        <Routes>
+          {/* public route */}
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/that" element={<That />} />
+          <Route path="/play" element={<Play />} />
+          <Route path="/play-quiz" element={<PlayQuiz />} />
+          <Route path="/result" element={<Result />} />
+          <Route path="/*" element={<NotFound />} />
+          {/* private route */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/start" element={<Start />} />
+            <Route path="/share" element={<Share />} />
+          </Route>
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -1,26 +1,27 @@
-body{
+body {
     text-align: center;
     margin: 10px;
 }
 
-.create-quiz{
+.create-quiz {
     font-weight: bold;
     margin-top: 2%;
 }
 
-.name{
+.name {
     margin-top: 10%;
 }
 
-form{
+form {
     margin-top: 5%;
     /* display: none; */
 }
-.hide-form{
+
+.hide-form {
     display: none;
 }
 
-input{
+input {
     margin-top: 20px;
     padding: 20px 60px;
     border-radius: 20px;
@@ -28,15 +29,16 @@ input{
     width: 30%;
 }
 
-.error{
+.error {
     color: red;
     margin: 2% 0;
 }
 
-input:focus ~ .error{
+input:focus~.error {
     display: none;
 }
-.continue{
+
+.continue {
     display: block;
     margin: 20px auto;
     border: none;
@@ -44,47 +46,47 @@ input:focus ~ .error{
     color: #fff;
     font-size: 20px;
     border-radius: 7px;
-    background-color:  #6c63ff;
+    background-color: #6c63ff;
     cursor: pointer;
     font-family: 'Alkatra', cursive;
 }
 
-.spinner-container{
+.spinner-container {
     padding: 0 20px;
     display: none;
 }
 
-.show-spinner{
+.show-spinner {
     display: inline-block;
 }
 
-.who-are-you{
+.who-are-you {
     margin-top: 5%;
     font-weight: bold;
 }
 
-.gender{
+.gender {
     display: none;
     /* margin-top: 20%; */
 }
 
-.name{
+.name {
     text-transform: capitalize;
 }
 
-.show-gender{
+.show-gender {
     display: block;
 }
 
-.gender-icon{
+.gender-icon {
     justify-content: space-between;
     align-items: center;
     display: flex;
     margin-top: 2%;
-    padding:  0 30%;
+    padding: 0 30%;
 }
 
-.gender-container{
+.gender-container {
     background-color: #497ff3;
     border-radius: 7px;
     padding: 5px;
@@ -97,17 +99,17 @@ input:focus ~ .error{
     margin: 5px 0;
 } */
 
-.gender-img{
+.gender-img {
     width: 60%;
     height: 20%;
 }
 
-.alert-err{
+.alert-err {
     color: red;
     font-style: italic;
 }
 
-.create{
+.create {
     padding: 10px 20px;
     border-radius: 8px;
     background-color: #000;
@@ -116,43 +118,43 @@ input:focus ~ .error{
 }
 
 /* Mobile */
-@media(max-width:1200px){
+@media(max-width:1200px) {
     .create-quiz {
         margin-top: 8%;
     }
 
-    .continue{
+    .continue {
         width: 70%;
     }
 
-    .name{
+    .name {
         margin-top: 30%;
     }
-    
-    input{
+
+    input {
         width: 70%;
         padding: 20px 50px;
         border-radius: 7px;
     }
 
-    .gender{
+    .gender {
         margin-top: 20%;
     }
 
-    .gender-container{
+    .gender-container {
         width: 94%;
         margin: 30px 20px;
     }
 
-    .gender-icon{
+    .gender-icon {
         padding: 0 15%;
     }
 
-    .gender-img{
+    .gender-img {
         width: 100%;
     }
 
-    .create{
+    .create {
         width: 80%;
     }
 }
