@@ -50,6 +50,7 @@ const Start = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     userChoice(trueValues);
+    window.location = "/result";
   };
   return (
     <>
