@@ -44,6 +44,7 @@ const Home = () => {
   if (data.name) {
     creatorChoice(data.name, choice);
   }
+  sessionStorage.setItem("choiceLength", choice.length);
   return (
     <>
       <div className="home">

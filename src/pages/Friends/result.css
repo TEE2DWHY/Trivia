@@ -20,6 +20,10 @@
     margin-top: -8%;
 }
 
+.result-text {
+    font-weight: bold;
+}
+
 .creator-reaction {
     margin-top: 20%;
     font-weight: 900;

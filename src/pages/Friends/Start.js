@@ -1,5 +1,5 @@
-import { useState } from "react";
-// import axios from "axios";
+import { useState, useEffect } from "react";
+import axios from "axios";
 // icons
 import Restart from "../../assets/icons/Restart";
 import Button from "../../component/Button";
@@ -7,7 +7,10 @@ import Button from "../../component/Button";
 import { display } from "../../utils/display";
 // styling
 import ".././start.css";
-import { userChoice } from "../../config/session";
+// config
+import { matchedValues, userChoice } from "../../config/session";
+// url
+import { update } from "../../config/url";
 
 const Start = () => {
   // get creator name
@@ -46,10 +49,31 @@ const Start = () => {
   };
   // Get only true values
   const trueValues = Object.keys(choice).filter((key) => choice[key]);
+  // get creator's id
+  const creatorId = sessionStorage.getItem("id");
+  //get creator's choice(s) resource
+  const [creatorChoice, setCreatorChoice] = useState([]);
+
+  useEffect(() => {
+    const choices = async () => {
+      try {
+        const res = await axios.get(`${update}/${creatorId}`);
+        setCreatorChoice(res.data.user.choice);
+      } catch (err) {
+        // console.log(err)
+      }
+    };
+    choices();
+  });
+  // console.log(creatorChoice.length);
   // handleSubmit
   const handleSubmit = (e) => {
     e.preventDefault();
     userChoice(trueValues);
+    const matchedChoice = trueValues.filter((choice) =>
+      creatorChoice.includes(choice)
+    );
+    matchedValues(matchedChoice.length);
     window.location = "/result";
   };
   return (

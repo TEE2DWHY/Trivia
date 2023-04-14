@@ -43,3 +43,8 @@ export const userChoice = ([
   sessionStorage.setItem("userSocialChoice", social);
   sessionStorage.setItem("userVendorChoice", vendor);
 };
+
+// set matched values
+export const matchedValues = (choices) => {
+  sessionStorage.setItem("score", choices);
+};
