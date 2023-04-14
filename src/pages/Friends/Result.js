@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 // styling
 import "./result.css";
 // images
 import result from "../../assets/images/result.gif";
-import { Link } from "react-router-dom";
+// import poor from "../../assets/images/poor.gif";
 const Result = () => {
   // get creator's name
   const creatorName = sessionStorage.getItem("creatorName");
@@ -13,13 +14,21 @@ const Result = () => {
   return (
     <>
       <div className="result-container">
-        <h1>Good Friend!</h1>
+        <h3>
+          {score >= "5"
+            ? `Good Friend!`
+            : `You don't really know ${creatorName}!`}
+        </h3>
         <img className="result" src={result} alt="eyes" />
         <br />
         <h2 className="result-text">
-          {score} / {creatorChoice}
+          Score: {score} / {creatorChoice}
         </h2>
-        <h4 className="creator-reaction">{creatorName} will like it.</h4>
+        <h4 className="creator-reaction">
+          {score >= "5"
+            ? `${creatorName} will be happy.`
+            : `${creatorName} would be disappointed.`}
+        </h4>
       </div>
       <p className="turn">Now it’s Your turn!</p>
       <Link to="/">
