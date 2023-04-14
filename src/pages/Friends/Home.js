@@ -16,7 +16,7 @@ const Home = () => {
   id(creatorId);
   if (!creatorId) {
     alert("ID Not Found.");
-    window.location = "/";
+    window.location = "https://trivia-gamex.netlify.app";
   }
   //get creator resource(s)
   const [data, setData] = useState({});
