@@ -14,6 +14,10 @@ const Home = () => {
   // get creator's id
   const creatorId = window.location.search.slice(4);
   id(creatorId);
+  if (!creatorId) {
+    alert("ID Not Found.");
+    window.location = "/";
+  }
   //get creator resource(s)
   const [data, setData] = useState({});
   useEffect(() => {
