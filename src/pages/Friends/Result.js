@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./result.css";
 // images
 import result from "../../assets/images/result.gif";
-// import poor from "../../assets/images/poor.gif";
+import angry from "../../assets/images/angry.gif";
 const Result = () => {
   // get creator's name
   const creatorName = sessionStorage.getItem("creatorName");
@@ -19,7 +19,11 @@ const Result = () => {
             ? `Good Friend!`
             : `You don't really know ${creatorName}!`}
         </h3>
-        <img className="result" src={result} alt="eyes" />
+        <img
+          className="result"
+          src={score >= "5" ? `${result}` : `${angry}`}
+          alt="eyes"
+        />
         <br />
         <h2 className="result-text">
           Score: {score} / {creatorChoice}
