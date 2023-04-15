@@ -95,10 +95,6 @@ input:focus~.error {
     margin: 20px;
 }
 
-/* .gender-name{
-    margin: 5px 0;
-} */
-
 .gender-img {
     width: 60%;
     height: 20%;
@@ -115,6 +111,25 @@ input:focus~.error {
     background-color: #000;
     color: #ffff;
     width: 30%;
+}
+
+/* spinners */
+
+.spinner-container {
+    padding: 0 20px;
+    display: none;
+}
+
+.show-spinner {
+    display: inline-block;
+}
+
+.proceed-spinner {
+    display: none;
+}
+
+.show-proceed-spinner {
+    display: inline;
 }
 
 /* Mobile */
@@ -152,6 +167,10 @@ input:focus~.error {
 
     .gender-img {
         width: 100%;
+    }
+
+    .alert-err {
+        font-size: 14px;
     }
 
     .create {
