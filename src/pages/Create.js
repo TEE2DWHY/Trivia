@@ -40,7 +40,7 @@ const Create = () => {
     const spinner = document.querySelector(".spinner-container");
     spinner.classList.add("show-spinner");
     try {
-      const res = await axios.post(create, { name });
+      const res = await axios.post(create, name);
       console.log(res.data);
       userName(res.data.user.name);
       id(res.data.user._id);
@@ -72,6 +72,13 @@ const Create = () => {
       alert.innerHTML = `<p>An error occurred..</p>`;
     }
   };
+
+  const handleButton = () => {
+    const continueText = document.querySelector(".continue-text");
+    continueText.innerHTML = "Continue";
+    const spinner = document.querySelector(".spinner-container");
+    spinner.classList.remove("show-spinner");
+  };
   return (
     <>
       <div>
@@ -87,6 +94,7 @@ const Create = () => {
             placeholder="Your name"
             required
             onChange={handleName}
+            onClick={handleButton}
           />
           <div className="error"></div>
           <button className="continue">
