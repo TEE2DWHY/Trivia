@@ -40,16 +40,16 @@ const Create = () => {
     const spinner = document.querySelector(".spinner-container");
     spinner.classList.add("show-spinner");
     try {
-      const res = await axios.post(create, name);
+      const res = await axios.post(create, { name });
       console.log(res.data);
       userName(res.data.user.name);
       id(res.data.user._id);
       document.querySelector(".gender").classList.add("show-gender");
       document.querySelector(".form").classList.add("hide-form");
     } catch (err) {
-      // console.log(err);
       const error = document.querySelector(".error");
       error.innerHTML = `<p>An error occurred....</p>`;
+      // console.log(err.response.data.msg.message);
     }
   };
   // update user gender
@@ -72,7 +72,7 @@ const Create = () => {
       alert.innerHTML = `<p>An error occurred..</p>`;
     }
   };
-
+  // handle button change with input onClick
   const handleButton = () => {
     const continueText = document.querySelector(".continue-text");
     continueText.innerHTML = "Continue";
