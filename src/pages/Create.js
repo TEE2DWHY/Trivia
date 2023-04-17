@@ -41,7 +41,7 @@ const Create = () => {
     const spinner = document.querySelector(".spinner-container");
     spinner.classList.add("show-spinner");
     try {
-      const res = await axios.post(create, name);
+      const res = await axios.post(create, { name });
       // console.log(res.data);
       userName(res.data.user.name);
       id(res.data.user._id);
