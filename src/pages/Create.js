@@ -24,6 +24,7 @@ const Create = () => {
     boy: false,
     girl: false,
   });
+  //handle user gender
   const handleGender = (e) => {
     setGender((prevFormData) => {
       return {
@@ -40,8 +41,8 @@ const Create = () => {
     const spinner = document.querySelector(".spinner-container");
     spinner.classList.add("show-spinner");
     try {
-      const res = await axios.post(create, { name });
-      console.log(res.data);
+      const res = await axios.post(create, name);
+      // console.log(res.data);
       userName(res.data.user.name);
       id(res.data.user._id);
       document.querySelector(".gender").classList.add("show-gender");
@@ -49,6 +50,11 @@ const Create = () => {
     } catch (err) {
       const error = document.querySelector(".error");
       error.innerHTML = `<p>An error occurred....</p>`;
+      setTimeout(() => {
+        error.innerHTML = ` `;
+        spinner.classList.remove("show-spinner");
+        continueText.innerHTML = "Continue";
+      }, 3000);
       // console.log(err.response.data.msg.message);
     }
   };
