@@ -12,12 +12,8 @@ import { creatorChoice, id } from "../../config/session";
 
 const Home = () => {
   // get creator's id
-  const creatorId = window.location.search.slice(4);
+  const creatorId = window.location.pathname.slice(6);
   id(creatorId);
-  if (!creatorId) {
-    alert("ID Not Found.");
-    window.location = "https://trivia-gamex.netlify.app";
-  }
   //get creator resource(s)
   const [data, setData] = useState({});
   useEffect(() => {

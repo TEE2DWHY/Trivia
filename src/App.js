@@ -21,7 +21,7 @@ function App() {
           {/* public route */}
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/that" element={<That />} />
+          <Route path="/that/:id" element={<That />} />
           <Route path="/play" element={<Play />} />
           <Route path="/play-quiz" element={<PlayQuiz />} />
           <Route path="/result" element={<Result />} />
