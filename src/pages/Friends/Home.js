@@ -40,7 +40,7 @@ const Home = () => {
     };
     choices();
   });
-  // store creator's choices in session storage
+  // store creator's name & choices in session storage
   if (data.name) {
     creatorChoice(data.name, choice);
   }
