@@ -1,0 +1,12 @@
+.scoreboard-header {
+    margin-top: 4%;
+}
+
+.friends-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    padding: 0 25%
+}

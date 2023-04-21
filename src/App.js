@@ -5,6 +5,7 @@ import Create from "./pages/Create";
 import Start from "./pages/Start";
 import Share from "./pages/Share";
 import PrivateRoute from "./utils/PrivateRoute";
+import ScoreBoard from "./pages/ScoreBoard";
 // Friends
 import That from "./pages/Friends/Home";
 import Play from "./pages/Friends/Play";
@@ -30,6 +31,7 @@ function App() {
           <Route element={<PrivateRoute />}>
             <Route path="/start" element={<Start />} />
             <Route path="/share" element={<Share />} />
+            <Route path="/scores" element={<ScoreBoard />} />
           </Route>
         </Routes>
       </Router>

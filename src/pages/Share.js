@@ -11,6 +11,7 @@ import {
 } from "../assets/icons/Social";
 // socials sharing
 import { whatsapp } from "../utils/socials";
+import { Link } from "react-router-dom";
 // url link
 const id = sessionStorage.getItem("id");
 export const link = `https://trivia-gamex.netlify.app/that/${id}`;
@@ -64,7 +65,9 @@ const Share = () => {
             <Instagram /> Instagram
           </button>
         </div>
-        <button className="scores">View Scores</button>
+        <Link to="/scores">
+          <button className="scores">View Scores</button>
+        </Link>
       </div>
     </>
   );
