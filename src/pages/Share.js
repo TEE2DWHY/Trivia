@@ -1,3 +1,4 @@
+// import { Link } from "react-router-dom";
 // styling
 import "./share.css";
 // icons
@@ -11,10 +12,9 @@ import {
 } from "../assets/icons/Social";
 // socials sharing
 import { whatsapp } from "../utils/socials";
-import { Link } from "react-router-dom";
 // url link
 const id = sessionStorage.getItem("id");
-export const link = `https://trivia-gamex.netlify.app/that/${id}`;
+export const link = `https://triivia.netlify.app/that/${id}`;
 const Share = () => {
   // copy url link
   const copy = () => {
@@ -65,9 +65,9 @@ const Share = () => {
             <Instagram /> Instagram
           </button>
         </div>
-        <Link to="/scores">
-          <button className="scores">View Scores</button>
-        </Link>
+        {/* <Link to="/scores"> */}
+        <button className="scores">View Scores</button>
+        {/* </Link> */}
       </div>
     </>
   );
