@@ -83,6 +83,10 @@ button:hover {
         padding: 8px;
     }
 
+    .resized button {
+        padding: 10px 20px;
+    }
+
     .choice {
         margin-top: 10%;
     }

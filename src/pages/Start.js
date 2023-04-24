@@ -77,7 +77,7 @@ const Start = () => {
       </h3>
       <div className="choice">
         <div
-          className="beard object"
+          className="beard object resized"
           onClick={() => {
             display(".beard", "hide-class");
             display(".gym", "show-class");
@@ -93,7 +93,7 @@ const Start = () => {
         </div>
 
         <div
-          className="gym object"
+          className="gym object resized"
           onClick={() => {
             display(".gym", "hide-class");
             display(".song", "show-class");
@@ -125,7 +125,7 @@ const Start = () => {
         </div>
 
         <div
-          className="swallow object"
+          className="swallow object resized"
           onClick={() => {
             display(".swallow", "hide-class");
             display(".sex", "show-class");
@@ -141,7 +141,7 @@ const Start = () => {
         </div>
 
         <div
-          className="sex object"
+          className="sex object resized"
           onClick={() => {
             display(".sex", "hide-class");
             display(".subject", "show-class");
@@ -157,7 +157,7 @@ const Start = () => {
         </div>
 
         <div
-          className="subject object"
+          className="subject object resized"
           onClick={() => {
             display(".subject", "hide-class");
             display(".social-media", "show-class");
@@ -173,7 +173,7 @@ const Start = () => {
         </div>
 
         <div
-          className="social-media object"
+          className="social-media object resized"
           onClick={() => {
             display(".social-media", "hide-class");
             display(".movies", "show-class");
