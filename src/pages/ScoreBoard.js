@@ -23,8 +23,8 @@ const ScoreBoard = () => {
     <>
       <h4 className="scoreboard-header">ScoreBoard</h4>
       <div className="friends-container">
-        <h1>{scoreDetails.friend}</h1>
-        <h1>{scoreDetails.score}</h1>
+        <h3>{scoreDetails.friend}</h3>
+        <h6>{scoreDetails.score}</h6>
       </div>
     </>
   );

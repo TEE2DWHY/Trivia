@@ -1,12 +1,14 @@
 .scoreboard-header {
-    margin-top: 4%;
+    margin: 4% 0;
 }
 
 .friends-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 30%;
     margin: auto;
-    padding: 0 25%
+    padding: 0 10%;
+    border: 3px solid #afabf6;
+    /* font-size: 14px; */
 }
