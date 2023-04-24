@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 // styling
 import "./result.css";
 // images
@@ -35,9 +34,15 @@ const Result = () => {
         </h4>
       </div>
       <p className="turn">Now it’s Your turn!</p>
-      <Link to="/">
-        <button className="create-challenge">Create Your Challenge 👀</button>
-      </Link>
+      <button
+        className="create-challenge"
+        onClick={() => {
+          sessionStorage.clear();
+          window.location = "/";
+        }}
+      >
+        Create Your Challenge 👀
+      </button>
     </>
   );
 };
