@@ -153,7 +153,7 @@ input:focus~.error {
     }
 
     .gender {
-        margin-top: 20%;
+        margin-top: 15%;
     }
 
     .gender-container {
@@ -162,7 +162,7 @@ input:focus~.error {
     }
 
     .gender-icon {
-        padding: 0 15%;
+        padding: 0;
     }
 
     .gender-img {
