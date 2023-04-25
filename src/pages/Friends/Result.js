@@ -8,6 +8,10 @@ const Result = () => {
   const creatorName = sessionStorage.getItem("creatorName");
   //get user score
   const score = sessionStorage.getItem("score");
+  if (!score) {
+    alert("User score does not exist.");
+    window.location = "/";
+  }
   //get creator's choice
   const creatorChoice = sessionStorage.getItem("choiceLength");
   return (
