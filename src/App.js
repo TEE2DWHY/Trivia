@@ -25,12 +25,12 @@ function App() {
           <Route path="/that/:id" element={<That />} />
           <Route path="/play" element={<Play />} />
           <Route path="/play-quiz" element={<PlayQuiz />} />
-          <Route path="/result" element={<Result />} />
           <Route path="/*" element={<NotFound />} />
           {/* private route */}
           <Route element={<PrivateRoute />}>
             <Route path="/start" element={<Start />} />
             <Route path="/share" element={<Share />} />
+            <Route path="/result" element={<Result />} />
             <Route path="/scores" element={<ScoreBoard />} />
           </Route>
         </Routes>
