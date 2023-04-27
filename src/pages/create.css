@@ -162,7 +162,7 @@ input:focus~.error {
     }
 
     .gender-icon {
-        padding: 0;
+        padding: 3%;
     }
 
     .gender-img {

@@ -1,11 +1,11 @@
 import { link } from "../pages/Share";
-export const whatsapp = () =>{
-    const url = link
-    var text = "Take this test...How much do you know me?";
-    var message = encodeURIComponent(url) + " - " + encodeURIComponent(text);
-    var whatsapp_url = "https://api.whatsapp.com/send?text=" + message;
-    window.open(whatsapp_url);
-}
+export const whatsapp = () => {
+  const url = link;
+  var text = "Take this test...How much do you know me?";
+  var message = encodeURIComponent(url) + " - " + encodeURIComponent(text);
+  var whatsapp_url = "https://api.whatsapp.com/send?text=" + message;
+  window.open(whatsapp_url);
+};
 
 // export const facebook = () =>{
 //     var url = "https://www.example.com"; // replace with your desired URL

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+//styling
+import "./play.css";
 // icon
 import { LeftArrow } from "../../assets/icons/Arrows";
 import { Person } from "../../assets/icons/Personality";

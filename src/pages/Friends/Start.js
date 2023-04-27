@@ -127,7 +127,7 @@ const Start = () => {
           className="gym object"
           onClick={() => {
             display(".gym", "hide-class");
-            display(".song", "show-class");
+            display(".ice-cream", "show-class");
           }}
           id="element2"
         >
@@ -140,10 +140,10 @@ const Start = () => {
         </div>
 
         <div
-          className="song object"
+          className="ice-cream object resized"
           onClick={() => {
-            display(".song", "hide-class");
-            display(".swallow", "show-class");
+            display(".ice-cream", "hide-class");
+            display(".love", "show-class");
           }}
           id="element3"
         >
@@ -156,9 +156,9 @@ const Start = () => {
         </div>
 
         <div
-          className="swallow object"
+          className="love object"
           onClick={() => {
-            display(".swallow", "hide-class");
+            display(".love", "hide-class");
             display(".sex", "show-class");
           }}
           id="element4"
@@ -223,7 +223,7 @@ const Start = () => {
           className="movies object"
           onClick={() => {
             display(".movies", "hide-class");
-            display(".food-hub", "show-class");
+            display(".pet", "show-class");
             display(".skip", "hide-class");
           }}
           id="element8"
@@ -235,7 +235,7 @@ const Start = () => {
         </div>
 
         <div
-          className="food-hub"
+          className="pet resized-pets"
           onClick={() => {
             display(".submit", "show-class");
           }}

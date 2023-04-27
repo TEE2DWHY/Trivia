@@ -1,0 +1,6 @@
+/* mobile */
+@media(max-width:1200px) {
+    .gender-icon {
+        padding: 3% 7%;
+    }
+}
