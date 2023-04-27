@@ -78,6 +78,14 @@ button:hover {
     display: none;
 }
 
+.spinner {
+    display: none;
+}
+
+.show-spinner {
+    display: inline-block;
+}
+
 @media(max-width:1200px) {
     button {
         padding: 8px;

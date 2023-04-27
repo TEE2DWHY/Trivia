@@ -10,30 +10,40 @@ import { display } from "../utils/display";
 import { update } from "../config/url";
 // styling
 import "./start.css";
+import Spinner from "../assets/icons/Spinner";
 
 const Start = () => {
   // get username
   const name = sessionStorage.getItem("name");
   // get user choice
   const [choice, setChoice] = useState({
+    //1
     beard: false,
     noBeard: false,
+    //2
     gym: false,
     noGym: false,
-    sadSong: false,
-    romanticSong: false,
-    eba: false,
-    amala: false,
+    //3
+    chocolate: false,
+    vanilla: false,
+    //4
+    money: false,
+    love: false,
+    //5
     missionary: false,
     doggy: false,
+    //6
     english: false,
     math: false,
+    //7
     twitter: false,
     instagram: false,
+    //8
     actionMovies: false,
     loveMovies: false,
-    sansBuka: false,
-    skillz: false,
+    //9
+    cats: false,
+    dogs: false,
   });
   // handleChoice
   const handleChoice = (e) => {
@@ -49,6 +59,12 @@ const Start = () => {
   // handleSubmit
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // show spinner
+    const spinner = document.querySelector(".spinner");
+    spinner.classList.add("show-spinner");
+    // manage button text
+    const submitText = document.querySelector(".submit-text");
+    submitText.innerHTML = " ";
     try {
       const id = sessionStorage.getItem("id");
       const res = await axios.patch(`${update}/${id}`, { choice: trueValues });
@@ -56,7 +72,13 @@ const Start = () => {
       window.location = "/share";
     } catch (err) {
       const error = document.querySelector(".alert-err");
-      error.innerHTML = `<p>An error occurred</p>`;
+      error.innerHTML = `<p>An error occurred... Pls try again</p>`;
+      setTimeout(() => {
+        error.innerHTML = `<p> </p>`;
+      }, 3000);
+      spinner.classList.remove("show-spinner");
+      submitText.innerHTML = "submit";
+
       console.log(err);
     }
   };
@@ -116,11 +138,11 @@ const Start = () => {
           }}
           id="element3"
         >
-          <button onClick={handleChoice} name="sadSong">
-            Sad Songs
+          <button onClick={handleChoice} name="chocolate">
+            Chocolate
           </button>
-          <button onClick={handleChoice} name="romanticSong">
-            Romantic Songs
+          <button onClick={handleChoice} name="vanilla">
+            Vanilla
           </button>
         </div>
 
@@ -132,11 +154,11 @@ const Start = () => {
           }}
           id="element4"
         >
-          <button onClick={handleChoice} name="eba">
-            Eba
+          <button onClick={handleChoice} name="money">
+            Money
           </button>
-          <button onClick={handleChoice} name="amala">
-            Amala
+          <button onClick={handleChoice} name="love">
+            Love
           </button>
         </div>
 
@@ -209,15 +231,18 @@ const Start = () => {
             display(".submit", "show-class");
           }}
         >
-          <button onClick={handleChoice} name="sansBuka">
-            Sans Buka
+          <button onClick={handleChoice} name="cats">
+            Cat
           </button>
-          <button onClick={handleChoice} name="skillz">
-            Skillz
+          <button onClick={handleChoice} name="dogs">
+            Dogs
           </button>
           {/* submit */}
           <button className="submit" onClick={handleSubmit}>
-            Submit
+            <span className="submit-text">Submit</span>
+            <span className="spinner">
+              <Spinner />
+            </span>
           </button>
           <div className="alert-err"></div>
         </div>

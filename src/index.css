@@ -61,11 +61,12 @@ a {
   font-size: 16px;
 }
 
-.spinner-border {
+/* .spinner-border {
   justify-content: center;
   align-items: center;
 }
 
+*/
 .broken {
   margin-top: 2%;
 }

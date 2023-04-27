@@ -64,7 +64,7 @@ const Create = () => {
     const id = sessionStorage.getItem("id");
     const alert = document.querySelector(".alert-err");
     if (gender.boy === false && gender.girl === false) {
-      alert.innerHTML = `<p>Please select your gender by clicking on the images!</p>`;
+      alert.innerHTML = `<p>Please select your gender by clicking on the images!...then proceed.</p>`;
       return setTimeout(() => {
         alert.innerHTML = " ";
       }, 3000);

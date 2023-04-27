@@ -53,9 +53,11 @@ const Share = () => {
           <button className="snapchat">
             <SnapChat /> SnapChat
           </button>
-          <button className="facebook">
-            <Facebook /> Facebook
-          </button>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=URLENCODED_URL&t=Take this test...How much do you know me?">
+            <button className="facebook">
+              <Facebook /> Facebook
+            </button>
+          </a>
         </div>
         <div>
           <button className="messenger">
