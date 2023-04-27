@@ -53,7 +53,7 @@ const Share = () => {
           <button className="snapchat">
             <SnapChat /> SnapChat
           </button>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=URLENCODED_URL&t=Take this test...How much do you know me?">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://triivia.netlify.app&t=Take this test...How much do you know me?">
             <button className="facebook">
               <Facebook /> Facebook
             </button>

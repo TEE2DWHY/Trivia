@@ -58,13 +58,13 @@ button:hover {
 
 /* Manage State */
 .gym,
-.song,
-.swallow,
+.ice-cream,
+.love,
 .sex,
 .subject,
 .social-media,
 .movies,
-.food-hub {
+.pet {
     display: none;
 }
 
@@ -93,6 +93,10 @@ button:hover {
 
     .resized button {
         padding: 10px 20px;
+    }
+
+    .resized-pet button {
+        padding: 10px 25px;
     }
 
     .choice {
