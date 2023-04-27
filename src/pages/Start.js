@@ -232,7 +232,7 @@ const Start = () => {
           }}
         >
           <button onClick={handleChoice} name="cats">
-            Cat
+            Cats
           </button>
           <button onClick={handleChoice} name="dogs">
             Dogs

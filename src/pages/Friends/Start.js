@@ -19,24 +19,33 @@ const Start = () => {
   const userName = sessionStorage.getItem("name");
   // get user choice
   const [choice, setChoice] = useState({
+    //1
     beard: false,
     noBeard: false,
+    //2
     gym: false,
     noGym: false,
-    sadSong: false,
-    romanticSong: false,
-    eba: false,
-    amala: false,
+    //3
+    chocolate: false,
+    vanilla: false,
+    //4
+    money: false,
+    love: false,
+    //5
     missionary: false,
     doggy: false,
+    //6
     english: false,
     math: false,
+    //7
     twitter: false,
     instagram: false,
+    //8
     actionMovies: false,
     loveMovies: false,
-    sansBuka: false,
-    skillz: false,
+    //9
+    cats: false,
+    dogs: false,
   });
   // handleChoice
   const handleChoice = (e) => {
@@ -138,11 +147,11 @@ const Start = () => {
           }}
           id="element3"
         >
-          <button onClick={handleChoice} name="sadSong">
-            Sad Songs
+          <button onClick={handleChoice} name="chocolate">
+            Chocolate
           </button>
-          <button onClick={handleChoice} name="romanticSong">
-            Romantic Songs
+          <button onClick={handleChoice} name="vanilla">
+            Vanilla
           </button>
         </div>
 
@@ -154,11 +163,11 @@ const Start = () => {
           }}
           id="element4"
         >
-          <button onClick={handleChoice} name="eba">
-            Eba
+          <button onClick={handleChoice} name="money">
+            Money
           </button>
-          <button onClick={handleChoice} name="amala">
-            Amala
+          <button onClick={handleChoice} name="love">
+            Love
           </button>
         </div>
 
@@ -231,11 +240,11 @@ const Start = () => {
             display(".submit", "show-class");
           }}
         >
-          <button onClick={handleChoice} name="sansBuka">
-            Sans Buka
+          <button onClick={handleChoice} name="cats">
+            Cats
           </button>
-          <button onClick={handleChoice} name="skillz">
-            Skillz
+          <button onClick={handleChoice} name="dogs">
+            Dogs
           </button>
           {/* submit */}
           <button className="submit" onClick={handleSubmit}>
