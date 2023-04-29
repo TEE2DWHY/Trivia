@@ -1,6 +1,6 @@
 import "./create.css";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // icons
 import { LeftArrow } from "../assets/icons/Arrows";
 import { Person } from "../assets/icons/Personality";
@@ -32,27 +32,26 @@ const Create = () => {
         [e.target.name]: true,
       };
     });
-    //manage gender's choice.
-    const genderChoice = () => {
-      const genderSelection = document.querySelector(".gender-alert");
-      if (gender.boy === true) {
-        genderSelection.innerHTML = `<span>
-       <i class="fa-solid fa-circle-exclamation"></i>
-        male gender is selected.</span>`;
-        setTimeout(() => {
-          genderSelection.innerHTML = " ";
-        }, 3000);
-      } else if (gender.girl === true) {
-        genderSelection.innerHTML = `<span>
-       <i class="fa-solid fa-circle-exclamation"></i>
-        female gender is selected.</span>`;
-        setTimeout(() => {
-          genderSelection.innerHTML = " ";
-        }, 3000);
-      }
-    };
-    genderChoice();
   };
+  //manage gender's choice of user
+  useEffect(() => {
+    const genderSelection = document.querySelector(".gender-alert");
+    if (gender.boy === true) {
+      genderSelection.innerHTML = `<span>
+       <i class="fa-solid fa-circle-exclamation"></i>
+        male gender is selected. please proceed</span>`;
+      setTimeout(() => {
+        genderSelection.innerHTML = " ";
+      }, 3000);
+    } else if (gender.girl === true) {
+      genderSelection.innerHTML = `<span>
+       <i class="fa-solid fa-circle-exclamation"></i>
+        female gender is selected. pls proceed</span>`;
+      setTimeout(() => {
+        genderSelection.innerHTML = " ";
+      }, 3000);
+    }
+  });
   // create user
   const submitName = async (e) => {
     e.preventDefault();
