@@ -32,6 +32,26 @@ const Create = () => {
         [e.target.name]: true,
       };
     });
+    //manage gender's choice.
+    const genderChoice = () => {
+      const genderSelection = document.querySelector(".gender-alert");
+      if (gender.boy === true) {
+        genderSelection.innerHTML = `<span>
+       <i class="fa-solid fa-circle-exclamation"></i>
+        male gender is selected.</span>`;
+        setTimeout(() => {
+          genderSelection.innerHTML = " ";
+        }, 3000);
+      } else if (gender.girl === true) {
+        genderSelection.innerHTML = `<span>
+       <i class="fa-solid fa-circle-exclamation"></i>
+        female gender is selected.</span>`;
+        setTimeout(() => {
+          genderSelection.innerHTML = " ";
+        }, 3000);
+      }
+    };
+    genderChoice();
   };
   // create user
   const submitName = async (e) => {
@@ -140,6 +160,7 @@ const Create = () => {
               />
             </div>
           </span>
+          <span className="gender-alert"></span>
           <p className="alert-err"></p>
           <button className="create" onClick={submitGender}>
             <span className="proceed-button">Proceed to Create</span>

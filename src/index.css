@@ -61,6 +61,10 @@ a {
   font-size: 16px;
 }
 
+.fa-circle-exclamation {
+  color: #ec3636;
+}
+
 /* .spinner-border {
   justify-content: center;
   align-items: center;
