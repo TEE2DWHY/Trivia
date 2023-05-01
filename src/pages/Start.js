@@ -82,8 +82,18 @@ const Start = () => {
       console.log(err);
     }
   };
+  // add sound to buttons
+  // const btnSound = () => {
+  //   const audio = document.getElementById("audio");
+  //   audio.play();
+  // };
   return (
     <>
+      {/* audio */}
+      {/* <audio id="audio">
+        <source src="../assets/sounds/click.wav" type="audio/mpeg" />
+      </audio> */}
+      {/* buttons */}
       <Button text="1" />
       <Button text="2" />
       <Button text="3" />
@@ -106,10 +116,10 @@ const Start = () => {
           }}
           id="element1"
         >
-          <button onClick={handleChoice} name="beard">
+          <button onClick={handleChoice} name="beard" id="btn">
             Beard
           </button>
-          <button onClick={handleChoice} name="noBeard">
+          <button onClick={handleChoice} name="noBeard" id="btn">
             No Beards
           </button>
         </div>

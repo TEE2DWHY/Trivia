@@ -16,7 +16,7 @@ const Start = () => {
   // get creator name
   const creatorName = sessionStorage.getItem("creatorName");
   //get user name
-  const userName = sessionStorage.getItem("name");
+  const friend = sessionStorage.getItem("name");
   // get user choice
   const [choice, setChoice] = useState({
     //1
@@ -74,16 +74,26 @@ const Start = () => {
     };
     choices();
   });
-  // console.log(creatorChoice.length);
   // handleSubmit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     userChoice(trueValues);
     const matchedChoice = trueValues.filter((choice) =>
       creatorChoice.includes(choice)
     );
     matchedValues(matchedChoice.length);
-    window.location = "/result";
+    // send friends name and score to creators document
+    const score = sessionStorage.getItem("score");
+    try {
+      const res = await axios.post(`${update}/${creatorId}`, {
+        friend,
+        score,
+      });
+      console.log(res.data);
+      window.location = "/result";
+    } catch (err) {
+      console.log(err);
+    }
   };
   return (
     <>
@@ -98,7 +108,7 @@ const Start = () => {
       <Button text="9" />
       <h3 className="choice">
         <span style={{ textTransform: "capitalize", padding: "0 5px" }}>
-          {userName}
+          {friend}
         </span>
         what will
         <span style={{ textTransform: "capitalize", padding: "0 5px" }}>

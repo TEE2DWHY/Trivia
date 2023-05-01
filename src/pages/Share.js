@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // styling
 import "./share.css";
 // icons
@@ -19,9 +20,7 @@ const Share = () => {
   const copy = () => {
     const link = document.getElementById("link");
     const url = link.innerHTML;
-    navigator.clipboard.writeText(
-      `Take this test...How much do you know me?: \n ${url}`
-    );
+    navigator.clipboard.writeText(url);
     alert("link is copied. Share with your friends.");
   };
   return (
@@ -68,9 +67,9 @@ const Share = () => {
             <Instagram /> Instagram
           </button>
         </div>
-        {/* <Link to="/scores"> */}
-        <button className="scores">View Scores</button>
-        {/* </Link> */}
+        <Link to="/scores">
+          <button className="scores">View Scores</button>
+        </Link>
       </div>
     </>
   );
