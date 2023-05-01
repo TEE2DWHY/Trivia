@@ -24,7 +24,9 @@ const ScoreBoard = () => {
   console.log(scoreDetails);
   return (
     <>
-      <h2 className="scoreboard-header">ScoreBoard!!!</h2>
+      <h2 className="scoreboard-header">
+        ScoreBoard!!! <i class="fa-solid fa-medal"></i>
+      </h2>
       <div className="friends-container">
         <div className="row">
           <p className="col-lg-6">Your Friends</p>
@@ -32,8 +34,18 @@ const ScoreBoard = () => {
         </div>
         {scoreDetails.map((data) => (
           <div className="row">
-            <h3 className="col-lg-6">{data.friend}</h3>
-            <h3 className="col-lg-6">{data.score}</h3>
+            <h3 className="col-md-6 col-sm-6">
+              <i class="fa-regular fa-circle-user"></i>
+              {data.friend}
+            </h3>
+            <h3 className="col-md-6 col-sm-6">
+              {data.score < 5 ? (
+                <i class="fa-solid fa-star-half-stroke"></i>
+              ) : (
+                <i class="fa-solid fa-star"></i>
+              )}
+              {data.score}
+            </h3>
           </div>
         ))}
       </div>

@@ -1,3 +1,7 @@
+body {
+    background-color: #f5e6e6;
+}
+
 .scoreboard-header {
     margin: 4% 0;
 }
@@ -8,11 +12,35 @@ p {
 }
 
 .friends-container {
-    /* display: flex; 
-    align-items: center;
-    justify-content: space-between; */
-    width: 70%;
+    width: 45%;
     margin: auto;
-    padding: 0 10%;
-    border: 3px solid #afabf6;
+    padding: 2% 4%;
+    border-radius: 20px 29px 30px 28px;
+    border: 3px solid #1c1c1c;
+}
+
+h3 {
+    display: inline;
+}
+
+.fa-circle-user {
+    padding-right: 10px;
+    color: #3C486B;
+    font-size: 18px;
+}
+
+.col-md-6 {
+    border: 1px solid #1c1c1c;
+    padding: 5px;
+}
+
+/* mobile */
+@media(max-width:1200px) {
+    .friends-container {
+        width: 80%;
+    }
+
+    .fa-circle-user {
+        padding-right: 4px;
+    }
 }
