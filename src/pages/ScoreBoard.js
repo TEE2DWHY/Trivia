@@ -28,6 +28,7 @@ const ScoreBoard = () => {
         }, 3000);
       } catch (err) {
         alert("an error occurred");
+        window.location = "/share";
       }
     };
     getScore();
