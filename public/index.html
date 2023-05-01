@@ -32,27 +32,27 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <!-- disable right click -->
-  <!-- <script>
+  <script>
     document.addEventListener('contextmenu', (e) => {
       e.preventDefault()
     })
-  </script> -->
+  </script>
   <!-- disable F12 -->
-  <!-- <script>
+  <script>
     document.addEventListener('keydown', function (event) {
       if (event.keyCode == 123) {
         event.preventDefault();
       }
     });
-  </script> -->
+  </script>
   <!-- disable CTRL + U -->
-  <!-- <script>
+  <script>
     document.addEventListener('keydown', function (event) {
       if (event.ctrlKey && event.key === 'u') {
         event.preventDefault();
       }
     });
-  </script> -->
+  </script>
   <script>
     const originalSend = XMLHttpRequest.prototype.send;
     XMLHttpRequest.prototype.send = function () {
