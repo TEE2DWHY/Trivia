@@ -1,9 +1,9 @@
 const Copy = () => {
   return (
     <div>
-        <i className="fa-regular fa-copy fa-1x"></i>
+      <i class="fa-solid fa-copy"></i>
     </div>
-  )
-}
+  );
+};
 
-export default Copy
+export default Copy;

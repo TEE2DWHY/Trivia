@@ -26,12 +26,12 @@ function App() {
           <Route path="/play" element={<Play />} />
           <Route path="/play-quiz" element={<PlayQuiz />} />
           <Route path="/*" element={<NotFound />} />
+          <Route path="/scores" element={<ScoreBoard />} />
           {/* private route */}
           <Route element={<PrivateRoute />}>
             <Route path="/start" element={<Start />} />
             <Route path="/share" element={<Share />} />
             <Route path="/result" element={<Result />} />
-            <Route path="/scores" element={<ScoreBoard />} />
           </Route>
         </Routes>
       </Router>

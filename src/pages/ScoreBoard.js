@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import "./scoreboard.css";
 //url
 import { update } from "../config/url";
+// icons
+import { LeftArrow } from "../assets/icons/Arrows";
+import { Link } from "react-router-dom";
 
 const ScoreBoard = () => {
   // isLoading
@@ -36,6 +39,9 @@ const ScoreBoard = () => {
   return (
     <>
       <h2 className="scoreboard-header">
+        <Link to="/share">
+          <LeftArrow />
+        </Link>
         ScoreBoard!!! <i class="fa-solid fa-medal"></i>
       </h2>
       {isLoading ? (
