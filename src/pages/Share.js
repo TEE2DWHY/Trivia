@@ -26,7 +26,7 @@ const Share = () => {
   return (
     <>
       <h1 className="share-header">Share Quiz...</h1>
-      <h3 className="guess">Let's see who can guess your choice?</h3>
+      <h4 className="guess">Let's see who can guess your choice?...</h4>
       <div className="share">
         <h3 className="quiz-link">
           Send <span style={{ fontWeight: "bold" }}>Quiz Link</span> to Friends
