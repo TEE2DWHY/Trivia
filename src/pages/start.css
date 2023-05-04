@@ -115,4 +115,8 @@ button:hover {
     .submit {
         width: 80%;
     }
+
+    svg {
+        margin-top: 12%;
+    }
 }
