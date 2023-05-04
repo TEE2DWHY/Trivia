@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 //styling
 import "./scoreboard.css";
 //url
 import { update } from "../config/url";
 // icons
 import { LeftArrow } from "../assets/icons/Arrows";
-import { Link } from "react-router-dom";
 
 const ScoreBoard = () => {
   // isLoading
@@ -42,11 +42,11 @@ const ScoreBoard = () => {
         <Link to="/share">
           <LeftArrow />
         </Link>
-        ScoreBoard!!! <i class="fa-solid fa-medal"></i>
+        ScoreBoard!!! <i className="fa-solid fa-medal"></i>
       </h2>
       {isLoading ? (
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
         <div className="friends-container">
@@ -57,14 +57,14 @@ const ScoreBoard = () => {
           {scoreDetails.map((data) => (
             <div className="row">
               <h3 className="col-md-6 col-sm-6">
-                <i class="fa-regular fa-circle-user"></i>
+                <i className="fa-regular fa-circle-user"></i>
                 {data.friend}
               </h3>
               <h3 className="col-md-6 col-sm-6">
                 {data.score < 5 ? (
-                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <i className="fa-solid fa-star-half-stroke"></i>
                 ) : (
-                  <i class="fa-solid fa-star"></i>
+                  <i className="fa-solid fa-star"></i>
                 )}
                 {data.score}
               </h3>

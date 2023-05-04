@@ -21,6 +21,7 @@ button {
     background-color: #c1d2f5;
 }
 
+
 button:hover {
     transition: 2s all ease-in-out;
     background-color: #1b1b1b;
