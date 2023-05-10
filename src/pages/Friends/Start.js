@@ -11,6 +11,7 @@ import ".././start.css";
 import { matchedValues, userChoice } from "../../config/session";
 // url
 import { update } from "../../config/url";
+import Spinner from "../../assets/icons/Spinner";
 
 const Start = () => {
   // get creator name
@@ -84,6 +85,12 @@ const Start = () => {
     matchedValues(matchedChoice.length);
     // send friends name and score to creators document
     const score = sessionStorage.getItem("score");
+    // show spinner
+    const spinner = document.querySelector(".spinner");
+    spinner.classList.add("show-spinner");
+    // manage button text
+    const submitText = document.querySelector(".submit-text");
+    submitText.innerHTML = " ";
     try {
       const res = await axios.post(`${update}/${creatorId}`, {
         friend,
@@ -92,6 +99,14 @@ const Start = () => {
       console.log(res.data);
       window.location = "/result";
     } catch (err) {
+      const error = document.querySelector(".alert-err");
+      error.innerHTML = `<p>An error occurred... Pls try again</p>`;
+      setTimeout(() => {
+        error.innerHTML = `<p> </p>`;
+      }, 3000);
+      spinner.classList.remove("show-spinner");
+      submitText.innerHTML = "submit";
+
       console.log(err);
     }
   };
@@ -245,7 +260,7 @@ const Start = () => {
         </div>
 
         <div
-          className="pet resized-pets"
+          className="pet resized-pet"
           onClick={() => {
             display(".submit", "show-class");
           }}
@@ -258,7 +273,10 @@ const Start = () => {
           </button>
           {/* submit */}
           <button className="submit" onClick={handleSubmit}>
-            Submit
+            <span className="submit-text">Submit</span>
+            <span className="spinner">
+              <Spinner />
+            </span>
           </button>
           <div className="alert-err"></div>
         </div>

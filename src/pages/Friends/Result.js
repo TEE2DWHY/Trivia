@@ -37,6 +37,7 @@ const Result = () => {
             : `${creatorName} would be disappointed.`}
         </h4>
       </div>
+      <p className="friend-note">{creatorName} can see your score😎...</p>
       <p className="turn">Now it’s Your turn!</p>
       <button
         className="create-challenge"

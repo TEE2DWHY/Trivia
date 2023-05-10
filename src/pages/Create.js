@@ -38,14 +38,14 @@ const Create = () => {
     const genderSelection = document.querySelector(".gender-alert");
     if (gender.boy === true) {
       genderSelection.innerHTML = `<span>
-       <i className="fa-solid fa-circle-exclamation"></i>
+       <i class="fa-solid fa-circle-exclamation"></i>
         male gender is selected. please proceed</span>`;
       setTimeout(() => {
         genderSelection.innerHTML = " ";
       }, 3000);
     } else if (gender.girl === true) {
       genderSelection.innerHTML = `<span>
-       <i className="fa-solid fa-circle-exclamation"></i>
+       <i class="fa-solid fa-circle-exclamation"></i>
         female gender is selected. pls proceed</span>`;
       setTimeout(() => {
         genderSelection.innerHTML = " ";
@@ -61,7 +61,6 @@ const Create = () => {
     spinner.classList.add("show-spinner");
     try {
       const res = await axios.post(create, { name });
-      // console.log(res.data);
       userName(res.data.user.name);
       id(res.data.user._id);
       document.querySelector(".gender").classList.add("show-gender");
