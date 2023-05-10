@@ -106,7 +106,6 @@ const Start = () => {
       }, 3000);
       spinner.classList.remove("show-spinner");
       submitText.innerHTML = "submit";
-
       console.log(err);
     }
   };
