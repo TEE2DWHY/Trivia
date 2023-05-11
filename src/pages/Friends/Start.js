@@ -33,8 +33,8 @@ const Start = () => {
     money: false,
     love: false,
     //5
-    missionary: false,
-    doggy: false,
+    tvSeries: false,
+    movies: false,
     //6
     english: false,
     math: false,
@@ -183,7 +183,7 @@ const Start = () => {
           className="love object resized"
           onClick={() => {
             display(".love", "hide-class");
-            display(".sex", "show-class");
+            display(".movie", "show-class");
           }}
           id="element4"
         >
@@ -196,18 +196,18 @@ const Start = () => {
         </div>
 
         <div
-          className="sex object resized"
+          className="movie object resized"
           onClick={() => {
-            display(".sex", "hide-class");
+            display(".movie", "hide-class");
             display(".subject", "show-class");
           }}
           id="element5"
         >
-          <button onClick={handleChoice} name="missionary">
-            Missionary
+          <button onClick={handleChoice} name="tvSeries">
+            Tv-Series
           </button>
-          <button onClick={handleChoice} name="doggy">
-            Doggy
+          <button onClick={handleChoice} name="movies">
+            movies
           </button>
         </div>
 
