@@ -15,9 +15,9 @@ import Spinner from "../../assets/icons/Spinner";
 
 const Start = () => {
   // get creator name
-  const creatorName = sessionStorage.getItem("creatorName");
+  const creatorName = localStorage.getItem("creatorName");
   //get user name
-  const friend = sessionStorage.getItem("name");
+  const friend = localStorage.getItem("name");
   // get user choice
   const [choice, setChoice] = useState({
     //1
@@ -60,7 +60,7 @@ const Start = () => {
   // Get only true values
   const trueValues = Object.keys(choice).filter((key) => choice[key]);
   // get creator's id
-  const creatorId = sessionStorage.getItem("id");
+  const creatorId = localStorage.getItem("id");
   //get creator's choice(s) resource
   const [creatorChoice, setCreatorChoice] = useState([]);
 
@@ -84,7 +84,7 @@ const Start = () => {
     );
     matchedValues(matchedChoice.length);
     // send friends name and score to creators document
-    const score = sessionStorage.getItem("score");
+    const score = localStorage.getItem("score");
     // show spinner
     const spinner = document.querySelector(".spinner");
     spinner.classList.add("show-spinner");

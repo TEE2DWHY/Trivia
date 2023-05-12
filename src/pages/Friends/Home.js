@@ -40,11 +40,11 @@ const Home = () => {
     };
     choices();
   });
-  // store creator's name & choices in session storage
+  // store creator's name & choices in local storage
   if (data.name) {
     creatorChoice(data.name, choice);
   }
-  sessionStorage.setItem("choiceLength", choice.length);
+  localStorage.setItem("choiceLength", choice.length);
   return (
     <>
       <div className="home">

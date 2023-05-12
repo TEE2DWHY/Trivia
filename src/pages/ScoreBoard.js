@@ -19,7 +19,7 @@ const ScoreBoard = () => {
     },
   ]);
   //get creator id
-  const id = sessionStorage.getItem("id");
+  const id = localStorage.getItem("id");
 
   useEffect(() => {
     const getScore = async () => {

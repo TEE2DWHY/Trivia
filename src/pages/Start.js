@@ -14,7 +14,7 @@ import Spinner from "../assets/icons/Spinner";
 
 const Start = () => {
   // get username
-  const name = sessionStorage.getItem("name");
+  const name = localStorage.getItem("name");
   // get user choice
   const [choice, setChoice] = useState({
     //1
@@ -66,7 +66,7 @@ const Start = () => {
     const submitText = document.querySelector(".submit-text");
     submitText.innerHTML = " ";
     try {
-      const id = sessionStorage.getItem("id");
+      const id = localStorage.getItem("id");
       const res = await axios.patch(`${update}/${id}`, { choice: trueValues });
       console.log(res.data);
       window.location = "/share";

@@ -8,12 +8,12 @@ import { Person } from "../../assets/icons/Personality";
 // image
 import boy from "../../assets/images/boy.png";
 import girl from "../../assets/images/girl.png";
-// session
+// session (local-storage)
 import { userName } from "../../config/session";
 
 const Play = () => {
   // check if creator's name exist
-  const creatorName = sessionStorage.getItem("creatorName");
+  const creatorName = localStorage.getItem("creatorName");
   if (!creatorName) {
     alert("Creator name does not exist.");
     window.location = "/";
@@ -32,7 +32,7 @@ const Play = () => {
     document.querySelector(".gender").classList.add("show-gender");
     document.querySelector(".form").classList.add("hide-form");
   };
-  //set username to session storage
+  //set username to local storage
   userName("name");
   return (
     <>

@@ -13,7 +13,7 @@ import {
 // socials sharing
 import { whatsapp } from "../utils/socials";
 // url link
-const id = sessionStorage.getItem("id");
+const id = localStorage.getItem("id");
 export const link = `https://triivia.netlify.app/that/${id}`;
 const Share = () => {
   // copy url link

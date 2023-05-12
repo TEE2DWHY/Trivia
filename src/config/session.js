@@ -1,26 +1,26 @@
 // set username
 export const userName = (name) => {
-  sessionStorage.setItem("name", `${name}`);
-  sessionStorage.setItem("user", true);
+  localStorage.setItem("name", `${name}`);
+  localStorage.setItem("user", true);
 };
 // set user id
 export const id = (id) => {
-  sessionStorage.setItem("id", id);
+  localStorage.setItem("id", id);
 };
 // set creator choice
 export const creatorChoice = (
   name,
   [beard, gym, song, swallow, sex, subject, social, vendor]
 ) => {
-  sessionStorage.setItem("creatorName", name);
-  sessionStorage.setItem("beardChoice", beard);
-  sessionStorage.setItem("gymChoice", gym);
-  sessionStorage.setItem("songChoice", song);
-  sessionStorage.setItem("swallowChoice", swallow);
-  sessionStorage.setItem("sexChoice", sex);
-  sessionStorage.setItem("subjectChoice", subject);
-  sessionStorage.setItem("socialChoice", social);
-  sessionStorage.setItem("vendorChoice", vendor);
+  localStorage.setItem("beardChoice", beard);
+  localStorage.setItem("creatorName", name);
+  localStorage.setItem("gymChoice", gym);
+  localStorage.setItem("songChoice", song);
+  localStorage.setItem("swallowChoice", swallow);
+  localStorage.setItem("sexChoice", sex);
+  localStorage.setItem("subjectChoice", subject);
+  localStorage.setItem("socialChoice", social);
+  localStorage.setItem("vendorChoice", vendor);
 };
 
 //set user(s) choice
@@ -34,17 +34,17 @@ export const userChoice = ([
   social,
   vendor,
 ]) => {
-  sessionStorage.setItem("userBeardChoice", beard);
-  sessionStorage.setItem("userGymChoice", gym);
-  sessionStorage.setItem("userSongChoice", song);
-  sessionStorage.setItem("userSwallowChoice", swallow);
-  sessionStorage.setItem("userSexChoice", sex);
-  sessionStorage.setItem("userSubjectChoice", subject);
-  sessionStorage.setItem("userSocialChoice", social);
-  sessionStorage.setItem("userVendorChoice", vendor);
+  localStorage.setItem("userBeardChoice", beard);
+  localStorage.setItem("userGymChoice", gym);
+  localStorage.setItem("userSongChoice", song);
+  localStorage.setItem("userSwallowChoice", swallow);
+  localStorage.setItem("userSexChoice", sex);
+  localStorage.setItem("userSubjectChoice", subject);
+  localStorage.setItem("userSocialChoice", social);
+  localStorage.setItem("userVendorChoice", vendor);
 };
 
 // set matched values
 export const matchedValues = (choices) => {
-  sessionStorage.setItem("score", choices);
+  localStorage.setItem("score", choices);
 };

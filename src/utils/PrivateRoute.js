@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Home from "../pages/Home";
 const PrivateRoute = () => {
-  const account = sessionStorage.getItem("user");
+  const account = localStorage.getItem("user");
   return <>{account ? <Outlet /> : <Home />}</>;
 };
 

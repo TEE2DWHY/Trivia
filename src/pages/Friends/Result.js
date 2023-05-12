@@ -5,15 +5,15 @@ import result from "../../assets/images/result.gif";
 import angry from "../../assets/images/angry.gif";
 const Result = () => {
   // get creator's name
-  const creatorName = sessionStorage.getItem("creatorName");
+  const creatorName = localStorage.getItem("creatorName");
   //get user score
-  const score = sessionStorage.getItem("score");
+  const score = localStorage.getItem("score");
   if (!score) {
     alert("User score does not exist.");
     window.location = "/";
   }
   //get creator's choice
-  const creatorChoice = sessionStorage.getItem("choiceLength");
+  const creatorChoice = localStorage.getItem("choiceLength");
   return (
     <>
       <div className="result-container">
@@ -42,7 +42,7 @@ const Result = () => {
       <button
         className="create-challenge"
         onClick={() => {
-          sessionStorage.clear();
+          localStorage.clear();
           window.location = "/";
         }}
       >

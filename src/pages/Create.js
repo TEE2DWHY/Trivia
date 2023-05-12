@@ -1,6 +1,8 @@
-import "./create.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+//styling
+import "./create.css";
 // icons
 import { LeftArrow } from "../assets/icons/Arrows";
 import { Person } from "../assets/icons/Personality";
@@ -8,7 +10,7 @@ import Spinner from "../assets/icons/Spinner";
 // image
 import boy from "../assets/images/boy.png";
 import girl from "../assets/images/girl.png";
-// session
+// session (local-storage)
 import { id, userName } from "../config/session";
 // url
 import { create, update } from "../config/url";
@@ -79,7 +81,7 @@ const Create = () => {
   // update user gender
   const submitGender = async () => {
     // get id
-    const id = sessionStorage.getItem("id");
+    const id = localStorage.getItem("id");
     const alert = document.querySelector(".alert-err");
     if (gender.boy === false && gender.girl === false) {
       alert.innerHTML = `<p>Please select your gender by clicking on the images!...then proceed.</p>`;
@@ -110,7 +112,10 @@ const Create = () => {
     <>
       <div>
         <h1 className="create-quiz">
-          <LeftArrow /> Create Quiz
+          <Link to="/">
+            <LeftArrow />
+          </Link>
+          Create Quiz
         </h1>
         <form onSubmit={submitName} className="form">
           <h2 className="name">What's your Name?</h2>
