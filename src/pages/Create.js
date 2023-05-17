@@ -125,6 +125,7 @@ const Create = () => {
             name="name"
             placeholder="Your name"
             required
+            minLength="20"
             onChange={handleName}
             onClick={handleButton}
           />
