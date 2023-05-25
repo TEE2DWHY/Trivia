@@ -68,6 +68,7 @@ const Create = () => {
       document.querySelector(".gender").classList.add("show-gender");
       document.querySelector(".form").classList.add("hide-form");
     } catch (err) {
+      // console.log(err.response.data.msg);
       const error = document.querySelector(".error");
       error.innerHTML = `<p>An error occurred....</p>`;
       setTimeout(() => {

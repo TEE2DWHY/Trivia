@@ -56,6 +56,19 @@ const Start = () => {
         [e.target.name]: true,
       };
     });
+    if (!creatorChoice.includes(e.target.name)) {
+      const wrong = document.querySelector(".wrong");
+      wrong.classList.add("show-result-wrong");
+      setTimeout(() => {
+        wrong.classList.toggle("show-result-wrong");
+      }, 1100);
+    } else {
+      const right = document.querySelector(".right");
+      right.classList.add("show-result-right");
+      setTimeout(() => {
+        right.classList.toggle("show-result-right");
+      }, 1100);
+    }
   };
   // Get only true values
   const trueValues = Object.keys(choice).filter((key) => choice[key]);
@@ -63,16 +76,16 @@ const Start = () => {
   const creatorId = localStorage.getItem("id");
   //get creator's choice(s) resource
   const [creatorChoice, setCreatorChoice] = useState([]);
-
+  //get creators choice
+  const choices = async () => {
+    try {
+      const res = await axios.get(`${update}/${creatorId}`);
+      setCreatorChoice(res.data.user.choice);
+    } catch (err) {
+      // console.log(err)
+    }
+  };
   useEffect(() => {
-    const choices = async () => {
-      try {
-        const res = await axios.get(`${update}/${creatorId}`);
-        setCreatorChoice(res.data.user.choice);
-      } catch (err) {
-        // console.log(err)
-      }
-    };
     choices();
   });
   // handleSubmit
@@ -121,15 +134,25 @@ const Start = () => {
       <Button text="8" />
       <Button text="9" />
       <h3 className="choice">
-        <span style={{ textTransform: "capitalize", padding: "0 5px" }}>
-          {friend}
-        </span>
+        <span className="username">{friend}</span>
         what will
-        <span style={{ textTransform: "capitalize", padding: "0 5px" }}>
-          {creatorName}
-        </span>
+        <span className="username">{creatorName}</span>
         Choose?
       </h3>
+      <p className="wrong">
+        <i
+          className="fa-solid fa-circle-xmark"
+          style={{ color: "#f20707", marginRight: "5px" }}
+        ></i>
+        Wrong Answer...
+      </p>
+      <p className="right">
+        <i
+          className="fa-regular fa-circle-check"
+          style={{ color: "#b7a3f4", marginRight: "5px" }}
+        ></i>
+        Right Answer...
+      </p>
       <div className="choice">
         <div
           className="beard object resized"

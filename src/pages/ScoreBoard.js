@@ -20,22 +20,24 @@ const ScoreBoard = () => {
   ]);
   //get creator id
   const id = localStorage.getItem("id");
+  //fetch friend details
+  const getFriends = async () => {
+    try {
+      const res = await axios.get(`${update}/${id}`);
+      setTimeout(() => {
+        setIsLoading(false);
+        setScoreDetails(res.data.user.friends);
+      }, 3000);
+    } catch (err) {
+      alert("an error occurred");
+      window.location = "/share";
+    }
+  };
 
   useEffect(() => {
-    const getScore = async () => {
-      try {
-        const res = await axios.get(`${update}/${id}`);
-        setTimeout(() => {
-          setIsLoading(false);
-          setScoreDetails(res.data.user.friends);
-        }, 3000);
-      } catch (err) {
-        alert("an error occurred");
-        window.location = "/share";
-      }
-    };
-    getScore();
+    getFriends();
   });
+
   return (
     <>
       <h2 className="scoreboard-header">
