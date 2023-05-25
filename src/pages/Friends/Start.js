@@ -296,7 +296,9 @@ const Start = () => {
           <button onClick={handleChoice} name="missionary">
             Missionary
           </button>
-          <button name="doggy">Doggy</button>
+          <button name="doggy" onClick={handleChoice}>
+            Doggy
+          </button>
         </div>
 
         <div
